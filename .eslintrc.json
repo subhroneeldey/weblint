@@ -1,0 +1,10 @@
+{
+    "extends": ["standard","plugin:angular/johnpapa"],
+    "plugins": [
+        "standard",
+        "promise", "angular"
+    ],
+    "globals": {
+        "angular":"true"
+    }
+}
