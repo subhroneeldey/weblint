@@ -18,7 +18,7 @@ gulp.task('lint', () => {
 
 
 //For css
-gulp.task('sass1', function () {
+gulp.task('sass', function () {
   return gulp.src('sass/**/*.s+(a|c)ss')
     .pipe(sassLint())
     .pipe(sassLint.format())
@@ -29,6 +29,6 @@ gulp.task('sass1', function () {
 
 
 
-gulp.task('default', ['lint'], function () {
+gulp.task('default', ['lint','sass'], function () {
     
 });
