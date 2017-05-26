@@ -6,5 +6,13 @@
     ],
     "globals": {
         "angular":"true"
+    },
+    "rules":{
+        "comma-spacing":0,
+        "block-spacing":0,
+        "key-spacing":0,
+        "semi-spacing":0,
+        "space-infix-ops":0,
+        "keyword-spacing":0
     }
 }
