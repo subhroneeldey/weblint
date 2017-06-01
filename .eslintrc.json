@@ -13,6 +13,21 @@
         "key-spacing":0,
         "semi-spacing":0,
         "space-infix-ops":0,
-        "keyword-spacing":0
+        "keyword-spacing":0,
+        "space-before-blocks":0,
+        "quotes":0,
+        "brace-style":0,
+        "yoda":0,
+        "indent":0,
+        "space-before-function-paren":0,
+        "one-var":0,
+        "angular/controller-name":[2,"partnername"],
+        "angular/directive-name":[2,"partnername"],
+        "angular/module-name":[2,"partnername"],
+        "angular/service-name":[2,"partnername"],
+        "angular/filter-name":[2,"partnername"]
+        
+
+
     }
 }
