@@ -11,6 +11,7 @@ var transform = require('vinyl-transform')
 var map = require('map-stream')
 var sass=require('gulp-sass');
 var access = require('gulp-accessibility');
+var checkangular=require("./Angulardependency");
 //Initialize class names from here
 //For JavaScript
 gulp.task('lint', () => {
@@ -68,6 +69,23 @@ gulp.task('test', function() {
     }))
     .pipe(gulp.dest('reports/txt'));
 });
+
+
+
+
+//To prevent overwriting of libraries and check for dependencies
+gulp.task('checkdependency', function() {
+  var checkdepen = transform(function(filename) {
+    return map(function(chunk, next) {
+      return next(null, checkangular(chunk.toString()))
+    })
+  })
+  gulp.src('javascript/*.js')
+    .pipe(checkdepen)
+    
+})
+
+
 
 gulp.task('default', ['lint','sass','test','checkcss','checkcss2'], function () {
     
