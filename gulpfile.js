@@ -43,7 +43,7 @@ gulp.task('parse_css', function () {
       util.log(util.colors.red(err));
     });
 });
-// for multiple classes sharing
+// for multiple classes sharing parsing and sharing
 gulp.task('parse_css2', function () {
   var n="outer";
   gulp.src(['sass/*.s+(a|c)ss'])
