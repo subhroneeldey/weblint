@@ -58,7 +58,7 @@ gulp.task('parse_css2', function () {
 //For accessibility
 
 gulp.task('test', function() {
-  return gulp.src('./**/*.html')
+  return gulp.src(['./**/*.html','./**/*.js'])
     .pipe(access({
       force: true
     }))
@@ -87,6 +87,6 @@ gulp.task('checkdependency', function() {
 
 
 
-gulp.task('default', ['lint','sass','test','checkcss','checkcss2'], function () {
+gulp.task('default', ['lint','sass','test','parse_css','parse_css2','test','checkdependency'], function () {
     
 });
