@@ -10,6 +10,7 @@ var partnername="partnername";
 var transform = require('vinyl-transform')
 var map = require('map-stream')
 var sass=require('gulp-sass');
+var access = require('gulp-accessibility');
 //Initialize class names from here
 //For JavaScript
 gulp.task('lint', () => {
@@ -33,59 +34,41 @@ gulp.task('sass', function () {
 });
 
  //For parsing and checking
-gulp.task('check', function () {
+gulp.task('parse_css', function () {
   var n="outer";
   gulp.src(['sass/**/*.s+(a|c)ss'])
-    .pipe(check(/(?!n)/))
+    .pipe(check(/(^|}[\n\s]*)[\s]*[\.][\s]*(?!partnername)[a-zA-Z1234567890_-]+((\s[a-zA-Z1234567890_-\s]+{)|[\s]*{)/gm))
+    .on('error', function (err) {
+      util.beep();
+      util.log(util.colors.red(err));
+    });
+});
+// for multiple classes sharing
+gulp.task('parse_css2', function () {
+  var n="outer";
+  gulp.src(['sass/*.s+(a|c)ss'])
+    .pipe(check(/\.partnername\..+{/gm))
     .on('error', function (err) {
       util.beep();
       util.log(util.colors.red(err));
     });
 });
 
-//For modifying html class names for partners
+//For accessibility
 
-gulp.task('changehtml', function() {
-  var change_html = transform(function(filename) {
-    return map(function(chunk, next) {
-      return next(null, "<div class="+partnername+">\n"+chunk.toString()+"\n</div>")
-    })
-  })
-  gulp.src('html/*.html')
-    .pipe(change_html)
-    .pipe(gulp.dest('html/'))
-})
-
-//For modifying sass class name for partners
-gulp.task('changesass', function() {
-  var change = transform(function(filename) {
-    return map(function(chunk, next) {
-      return next(null, "."+partnername+"{\n"+chunk.toString()+"}")
-    })
-  })
-  gulp.src('sass/**/*.s+(a|c)ss')
-    .pipe(change)
-    .pipe(gulp.dest('sass/'))
-})
-
-
-gulp.task('changecss', function() {
-  var changes = transform(function(filename) {
-    return map(function(chunk, next) {
-      return next(null, "."+partnername+"{\n"+chunk.toString()+"}")
-    })
-  })
-  gulp.src('css/**/*.css')
-    .pipe(changes)
-    .pipe(sass())
-    .pipe(gulp.dest('dist/css/'))
-})
-//Add Class Name Before css
-gulp.task('html_pre', function () {
-  return gulp.src(['html/*.html'])
-    .pipe(html_pre())
-    .pipe(gulp.dest('html'));
+gulp.task('test', function() {
+  return gulp.src('./**/*.html')
+    .pipe(access({
+      force: true
+    }))
+    .on('error', console.log)
+    .pipe(access.report({reportType: 'txt'}))
+    .pipe(rename({
+      extname: '.txt'
+    }))
+    .pipe(gulp.dest('reports/txt'));
 });
-gulp.task('default', ['lint','sass'], function () {
+
+gulp.task('default', ['lint','sass','test','checkcss','checkcss2'], function () {
     
 });
