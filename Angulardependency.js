@@ -2,9 +2,9 @@
 var fs=require('fs')
 var gutil = require('gulp-util');
 var path = require('path');
-var partnername="partnername";//Change Partner Name here
-var fxparray=["a","d"];
-var moduleRegex = /\.module\(\s*("partnername"|'partnername')\s*,\s*(\[[^\]]*\])/g;
+var partnername="app";//Change Partner Name here
+var fxparray=["a","d"];// fxp dependies 
+var moduleRegex = /\.module\(\s*("app"|'app')\s*,\s*(\[[^\]]*\])/g;
 //var contents = file.contents.toString();
 var m=fxparray.length;
 

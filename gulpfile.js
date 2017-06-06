@@ -12,11 +12,12 @@ var map = require('map-stream')
 var sass=require('gulp-sass');
 var access = require('gulp-accessibility');
 var checkangular=require("./Angulardependency");
+let rename = require("gulp-rename");
 //Initialize class names from here
 //For JavaScript
 gulp.task('lint', () => {
      
-    return gulp.src('javascript/*.js')
+    return gulp.src('javascript/**/*.js')
 
          
         .pipe(eslint())
@@ -58,7 +59,7 @@ gulp.task('parse_css2', function () {
 //For accessibility
 
 gulp.task('test', function() {
-  return gulp.src(['./**/*.html','./**/*.js'])
+  return gulp.src(['./**/*.html','./**/*.css'])
     .pipe(access({
       force: true
     }))
