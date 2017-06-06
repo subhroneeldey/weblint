@@ -82,3 +82,23 @@ gulp.task('html_pre', function () {
 });
 
 
+gulp.task('parse_css', function () {
+  gulp.src(['sass/**/*.s+(a|c)ss']).pipe(plumber())
+    .pipe(check(/(^|}[\n\s]*)[\s]*[\.][\s]*(?!partnername)[a-zA-Z1234567890_-]+((\s[a-zA-Z1234567890_-\s]+{)|[\s]*{)/gm))
+      .on('error', function (err) {
+      util.log(util.colors.red(err));
+      util.log("Css classes should be prefixed by Partner Name");
+    })
+    
+});
+
+
+gulp.task('parse_css2', function () {
+  var n="outer";
+  gulp.src(['sass/*.s+(a|c)ss'])
+    .pipe(check(/\.partnername\..+{/gm))
+    .on('error', function (err) {
+      util.beep();
+      util.log(util.colors.red(err));
+    });
+});

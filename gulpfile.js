@@ -14,6 +14,7 @@ var access = require('gulp-accessibility');
 var checkangular=require("./Angulardependency");
 let rename = require("gulp-rename");
 var plumber = require('gulp-plumber');
+var runSequence = require('run-sequence');
 //Initialize class names from here
 //For JavaScript
 gulp.task('lint', () => {
@@ -37,28 +38,40 @@ gulp.task('sass', function () {
 });
 
  //For parsing and checking
-gulp.task('parse_css', function () {
-  gulp.src(['sass/**/*.s+(a|c)ss'])
-    .pipe(check(/(^|}[\n\s]*)[\s]*[\.][\s]*(?!partnername)[a-zA-Z1234567890_-]+((\s[a-zA-Z1234567890_-\s]+{)|[\s]*{)/gm))
-      .on('error', function (err) {
-      util.log(util.colors.red(err));
-      util.log("Css classes should be prefixed by Partner Name");
+function op(chunk){
+    util.log(util.colors.red("These classes should be prefixed with partnername : "));
+    let test = chunk.match(/(^|}[\n\s]*)[\s]*(\.|#)[\s]*(?!partnername)[a-zA-Z1234567890_-]+((\s[a-zA-Z1234567890_-\s]+{)|[\s]*{)/gm).toString();//Change Partnername in the regex as required
+      test = test.replace(/[},{\.\s]/g,' ');
+   util.log(util.colors.yellow(test));
+}
+gulp.task('parse_css_vinyl', function() {
+  var checkdepen = transform(function(filename) {
+    return map(function(chunk, next) {
+      return next(null, op(chunk.toString()))
     })
+  })
+  gulp.src('sass/**/*.s+(a|c)ss')
+    .pipe(checkdepen)
     
-});
+})
 // for multiple classes sharing parsing and sharing
-gulp.task('parse_css2', function () {
-  var n="outer";
-  gulp.src(['sass/*.s+(a|c)ss'])
-    .pipe(check(/\.partnername\..+{/gm))
-    .on('error', function (err) {
-      util.beep();
-      util.log(util.colors.red(err));
-    });
-});
-
+function op2(chunk){
+    //util.log(util.colors.red("These classes don't start with partnername : "));
+    let test = chunk.match(/(\.|#)partnername\..+{/gm).toString();//Change Partnername in the regex as required
+      test = test.replace(/[},{\.\s]/g,' ');
+   util.log(util.colors.yellow(test));
+}
+gulp.task('parse_css_vinyl2', function() {
+  var checkdepen = transform(function(filename) {
+    return map(function(chunk, next) {
+      return next(null, op2(chunk.toString()))
+    })
+  })
+  gulp.src('sass/**/*.s+(a|c)ss')
+    .pipe(checkdepen)
+    
+})
 //For accessibility
-
 gulp.task('test', function() {
   return gulp.src(['./**/*.html','./**/*.css'])
     .pipe(access({
@@ -71,10 +84,6 @@ gulp.task('test', function() {
     }))
     .pipe(gulp.dest('reports/txt'));
 });
-
-
-
-
 //To prevent overwriting of libraries and check for dependencies
 gulp.task('checkdependency', function() {
   var checkdepen = transform(function(filename) {
@@ -83,9 +92,8 @@ gulp.task('checkdependency', function() {
     })
   })
   gulp.src('javascript/*.js')
-    .pipe(checkdepen)
-    
+    .pipe(checkdepen)    
 })
-gulp.task('default', ['lint','sass','test','parse_css','parse_css2','test','checkdependency'], function () {
-    
+gulp.task('default', [], function () {
+    runSequence(['lint','sass','checkdependency'],'parse_css_vinyl','parse_css_vinyl2','test')
 });
