@@ -13,6 +13,7 @@ var sass=require('gulp-sass');
 var access = require('gulp-accessibility');
 var checkangular=require("./Angulardependency");
 let rename = require("gulp-rename");
+var plumber = require('gulp-plumber');
 //Initialize class names from here
 //For JavaScript
 gulp.task('lint', () => {
@@ -37,13 +38,13 @@ gulp.task('sass', function () {
 
  //For parsing and checking
 gulp.task('parse_css', function () {
-  var n="outer";
   gulp.src(['sass/**/*.s+(a|c)ss'])
-    .pipe(check(/(^|}[\n\s]*)[\s]*[\.][\s]*(?!partnername)[a-zA-Z1234567890_-]+((\s[a-zA-Z1234567890_-\s]+{)|[\s]*{)/gm))
-    .on('error', function (err) {
-      util.beep();
-      util.log(util.colors.red(err));
-    });
+    .pipe(check(/(^|}[\n\s]*)[\s]*[\.][\s]*(?!partnername)[a-zA-Z1234567890_-]+((\s[a-zA-Z1234567890_-\s]+{)|[\s]*{)/gm))
+      .on('error', function (err) {
+      util.log(util.colors.red(err));
+      util.log("Css classes should be prefixed by Partner Name");
+    })
+    
 });
 // for multiple classes sharing parsing and sharing
 gulp.task('parse_css2', function () {
@@ -85,9 +86,6 @@ gulp.task('checkdependency', function() {
     .pipe(checkdepen)
     
 })
-
-
-
 gulp.task('default', ['lint','sass','test','parse_css','parse_css2','test','checkdependency'], function () {
     
 });
