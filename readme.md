@@ -65,6 +65,8 @@ gulp lint
 //For Mac Users
 sudo gulp lint 
 ```
+To modify or add some rules and plugins you can visit :http://eslint.org/
+
 ## 2)  Performs linting on the sass files using sassLint() using sass-lint which is licensed under MIT.
 
 **CODE:**
@@ -86,6 +88,8 @@ gulp sasslinting
 //For Mac Users
 sudo gulp sasslinting 
 ```
+To modify or add some rules and plugins you can visit :http://eslint.org/
+
 ## 3)  Performs linting on the css files using lint-css() using stylelint  which is licensed under MIT.
 
 **CODE:**
@@ -111,6 +115,7 @@ gulp lint-css
 //For Mac Users
 sudo gulp lint-css
 ```
+For modifying rules you can check :https://stylelint.io/user-guide/rules/
 
 ## 4) Ensures that all controllers, directives, filters, modules, services are prefixed by their partner names. 
 
@@ -132,6 +137,7 @@ gulp lint
 //For Mac Users
 sudo gulp lint 
 ```
+For other such angular rules check : https://github.com/Gillespie59/eslint-plugin-angular#rules
 
 ## 5)  Ensures that the css files are prefixed by the partner names
 
