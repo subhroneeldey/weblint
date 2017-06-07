@@ -1,8 +1,8 @@
 # A static code analyzer tool.
 
-## To perform linting, deal with partner applications, prevent overwriting of styles, ensure certain naming convention for partners and ensure accessibility guidelines 
+To perform linting, deal with partner applications, prevent overwriting of styles, ensure certain naming convention for partners and ensure accessibility guidelines 
 
-**>GENERAL INSTALLATION GUIDELINES:**
+## GENERAL INSTALLATION GUIDELINES
 
 This uses node.js so it should be installed 
 
@@ -21,28 +21,28 @@ gulp
 If you want to run any specific method of the gulpfile.js type gulp followed by the name of the method
 
 
-## > INSTRUCTION FOR PARTNERS:
-* In the gulpfile.js, in function checkcss() and checkcss2()., replace the partner name in the regex expression which is by default given as partnername.
-```javascript
-function checkcss(chunk){
-    util.log(util.colors.red("These classes should be prefixed with partnername : "));
-    let test = chunk.match(/(^|}[\n\s]*)[\s]*(\.|#)[\s]*(?!partnername)[a-zA-Z1234567890_-]+((\s[a-zA-Z1234567890_-\s]+{)|[\s]*{)/gm).toString();//Change Partnername in the regex as required
-```
-```javascript
-function checkcss2(chunk){
-    let test = chunk.match(/(\.|#)partnername\..+{/gm).toString();//Change Partnername in the regex as required
-```
-* In the Angulardependencies.js file mention the dependencies of your project in the fxp array.
-**In Angulardependency.js**
-```javascript
-var moduleRegex = /\.module\(\s*("partnername"|'partnername')\s*,\s*(\[[^\]]*\])/g;
-//Change Partnername here
-```
-## > INSTRUCTION FOR MAIN APPLICATION USER:
-* In the Angulardependencies.js file mention the dependencies of your project in the fxp array.
-```javascript
-var fxparray=["a","d"];// Main application must mention their dependencies here
-```
+> ##  INSTRUCTION FOR PARTNERS:
+> * In the gulpfile.js, in function checkcss() and checkcss2()., replace > the partner name in the regex expression which is by default given as > partnername.
+> ```javascript
+> function checkcss(chunk){
+>     util.log(util.colors.red("These classes should be prefixed with > partnername : "));
+>     let test = chunk.match(/(^|}[\n\s]*)[\s]*(\.|#)[\s]*(?!partnername)> [a-zA-Z1234567890_-]+((\s[a-zA-Z1234567890_-\s]+{)|[\s]*{)/gm)> .toString();//Change Partnername in the regex as required
+> ```
+> ```javascript
+> function checkcss2(chunk){
+>     let test = chunk.match(/(\.|#)partnername\..+{/gm).toString();> //Change Partnername in the regex as required
+> ```
+> * In the Angulardependencies.js file mention the dependencies of your > project in the fxp array.
+> **In Angulardependency.js**
+> ```javascript
+> var moduleRegex = /\.module\(\s*("partnername"|'partnername')\s*,\s*(\[> [^\]]*\])/g;
+> //Change Partnername here
+> ```
+> ## > INSTRUCTION FOR MAIN APPLICATION USER:
+> * In the Angulardependencies.js file mention the dependencies of your > project in the fxp array.
+> ```javascript
+> var fxparray=["a","d"];// Main application must mention their > dependencies here
+> ```
 # **> PRODUCT DESCRIPTION**
 
 ## 1) It performs linting on the JavaScript files using ESLINT with some modified rules which is licensed under MIT. 
@@ -92,7 +92,7 @@ sudo gulp sasslinting
 **CODE:**
 In .eslintrc.json
 ```json
-        "angular/controller-name":[2,"grm"],
+        "angular/controller-name":[2,"partnername"],
         "angular/directive-name":[2,"partnername"],
         "angular/module-name":[2,"partnername"],
         "angular/service-name":[2,"partnername"],

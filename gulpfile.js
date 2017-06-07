@@ -5,7 +5,6 @@ var check = require('gulp-check');//To check for regular expression for multi
 var util = require('gulp-util');
 var classPrefix =require('gulp-class-prefix');
 var prefixhtml= require('gulp-replace');
-var html_pre=require('./html-preceede');
 var partnername="partnername";
 var transform = require('vinyl-transform')
 var map = require('map-stream')
@@ -15,6 +14,8 @@ var checkangular=require("./Angulardependency");
 let rename = require("gulp-rename");
 var plumber = require('gulp-plumber');
 var runSequence = require('run-sequence');
+var gulpStylelint = require('gulp-stylelint');
+
 //Initialize class names from here
 //For JavaScript
 gulp.task('lint', () => {
@@ -28,7 +29,7 @@ gulp.task('lint', () => {
          
         .pipe(eslint.failAfterError());
 });
-//For css
+//For linting scss and sass
 gulp.task('sasslinting', function () {
   return gulp.src('sass/**/*.s+(a|c)ss')
     .pipe(sassLint())
@@ -36,6 +37,19 @@ gulp.task('sasslinting', function () {
     
     .pipe(sassLint.failOnError())
 });
+//For linting css
+
+gulp.task('lint-css', function lintCssTask() {
+    return gulp.src('./**/*.css')
+    .pipe(gulpStylelint({
+      reporters: [
+        {formatter: 'string', console: true}
+      ],
+      config : {  "extends": "stylelint-config-standard"}
+    }));
+});
+
+
 
  //For parsing and checking
 function checkcss(chunk){
@@ -95,5 +109,5 @@ gulp.task('checkdependency', function() {
     .pipe(checkdepen)    
 })
 gulp.task('default', [], function () {
-    runSequence(['lint','sasslinting','checkdependency'],'check-css-classname','check-css-classname2','test-accessibility')
+    runSequence(['lint','lint-css','sasslinting','checkdependency'],'check-css-classname','check-css-classname2','test-accessibility')
 });

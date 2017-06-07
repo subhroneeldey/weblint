@@ -28,7 +28,7 @@
         "no-floating-decimal":0,
         "no-sequences":0,
         "no-return-assign":0,
-        "angular/controller-name":[2,"grm"],
+        "angular/controller-name":[2,"partnername"],
         "angular/directive-name":[2,"partnername"],
         "angular/module-name":[2,"partnername"],
         "angular/service-name":[2,"partnername"],
