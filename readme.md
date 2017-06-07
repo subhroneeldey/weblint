@@ -1,6 +1,6 @@
 # A static code analyzer tool.
 
-##To deal with partner applications, prevent overwriting of styles, ensure certain naming convention for partners and ensure accessibility guidelines 
+## To deal with partner applications, prevent overwriting of styles, ensure certain naming convention for partners and ensure accessibility guidelines 
 
 **>GENERAL INSTALLATION GUIDELINES:**
 
@@ -23,7 +23,7 @@ If you want to run any specific method of the gulpfile.js type gulp followed by 
 
 **> PRODUCT DESCRIPTION**
 
-1) It performs linting on the JavaScript files using ESLINT with some modified rules which is licensed under MIT. 
+## 1) It performs linting on the JavaScript files using ESLINT with some modified rules which is licensed under MIT. 
 
 **CODE:**
 In gulpfile.js
@@ -43,7 +43,7 @@ gulp lint
 //For Mac Users
 sudo gulp lint 
 ```
-2)  Performs linting on the sass files using sassLint() using sass-lint which is licensed under MIT.
+## 2)  Performs linting on the sass files using sassLint() using sass-lint which is licensed under MIT.
 
 **CODE:**
 In gulpfile.js
@@ -65,7 +65,7 @@ gulp sasslinting
 sudo gulp sasslinting 
 ```
 
-3) Ensures that all controllers, directives, filters, modules, services are prefixed by their partner names. 
+## 3) Ensures that all controllers, directives, filters, modules, services are prefixed by their partner names. 
 
 **CODE:**
 In .eslintrc.json
@@ -86,7 +86,7 @@ gulp lint
 sudo gulp lint 
 ```
 
-4)  Ensures that the css files are prefixed by the partner names
+## 4)  Ensures that the css files are prefixed by the partner names
 
 **CODE:**
 In gulpfile.js
@@ -132,14 +132,14 @@ gulp.task('check-css-classname2', function() {
 
 Replace the partner name in the regex expression which is by default given as partnername in both function checkcss() and checkcss2().
 
-1)
+A)
 
 ```javascript
 function checkcss(chunk){
     util.log(util.colors.red("These classes should be prefixed with partnername : "));
     let test = chunk.match(/(^|}[\n\s]*)[\s]*(\.|#)[\s]*(?!partnername)[a-zA-Z1234567890_-]+((\s[a-zA-Z1234567890_-\s]+{)|[\s]*{)/gm).toString();//Change Partnername in the regex as required
 ```
-2)
+B)
 
 ```javascript
 function checkcss2(chunk){
@@ -155,7 +155,7 @@ sudo gulp check-css-classname
 sudo gulp check-css-classname2
 ```
 
-5) Checks for any duplicate redundancies so that there are no chances of overwriting the versions of the dependencies
+## 5) Checks for any duplicate redundancies so that there are no chances of overwriting the versions of the dependencies
 
 **CODE:**
 In gulpfile.js
@@ -175,7 +175,7 @@ gulp.task('checkdependency', function() {
 
  In the Angulardependencies.js file replace the partner name in the regex expression which is by default given as partnername for the two instances.
 
-**[NOTE FOR MAIN APPLICATION USER]**
+[NOTE FOR MAIN APPLICATION USER]**
 
 In the Angulardependencies.js file mention the dependencies of your project in the fxp array.
 **In Angulardependency.js**
@@ -196,7 +196,7 @@ gulp checkdependency
 sudo gulp checkdependency
 ```
 
-6) It checks whether the html and css files follow the accessibility guidelines and reports necessary errors in a separate file
+## 6) It checks whether the html and css files follow the accessibility guidelines and reports necessary errors in a separate file
 
 **CODE:**
 In gulpfile.js
@@ -223,7 +223,4 @@ gulp test-accessibility
 //For Mac Users
 sudo gulp test-accessibility
 ```
-**bold**
-
-*italic*
 
