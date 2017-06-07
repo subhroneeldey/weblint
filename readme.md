@@ -245,4 +245,7 @@ gulp test-accessibility
 //For Mac Users
 sudo gulp test-accessibility
 ```
-
+## AUTHOR: Subhroneel Dey
+## Mail : subhroneeldey4@gmail.com
+## Available on Github : https://github.com/subhroneeldey/weblint/blob/master/readme.md
+![myimage-alt-tag](./Subhroneel.jpg)
