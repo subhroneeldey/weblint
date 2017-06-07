@@ -29,7 +29,7 @@ gulp.task('lint', () => {
         .pipe(eslint.failAfterError());
 });
 //For css
-gulp.task('sass', function () {
+gulp.task('sasslinting', function () {
   return gulp.src('sass/**/*.s+(a|c)ss')
     .pipe(sassLint())
     .pipe(sassLint.format())
@@ -38,16 +38,16 @@ gulp.task('sass', function () {
 });
 
  //For parsing and checking
-function op(chunk){
+function checkcss(chunk){
     util.log(util.colors.red("These classes should be prefixed with partnername : "));
     let test = chunk.match(/(^|}[\n\s]*)[\s]*(\.|#)[\s]*(?!partnername)[a-zA-Z1234567890_-]+((\s[a-zA-Z1234567890_-\s]+{)|[\s]*{)/gm).toString();//Change Partnername in the regex as required
       test = test.replace(/[},{\.\s]/g,' ');
    util.log(util.colors.yellow(test));
 }
-gulp.task('parse_css_vinyl', function() {
+gulp.task('check-css-classname', function() {
   var checkdepen = transform(function(filename) {
     return map(function(chunk, next) {
-      return next(null, op(chunk.toString()))
+      return next(null, checkcss(chunk.toString()))
     })
   })
   gulp.src('sass/**/*.s+(a|c)ss')
@@ -55,16 +55,16 @@ gulp.task('parse_css_vinyl', function() {
     
 })
 // for multiple classes sharing parsing and sharing
-function op2(chunk){
+function checkcss2(chunk){
     //util.log(util.colors.red("These classes don't start with partnername : "));
     let test = chunk.match(/(\.|#)partnername\..+{/gm).toString();//Change Partnername in the regex as required
       test = test.replace(/[},{\.\s]/g,' ');
    util.log(util.colors.yellow(test));
 }
-gulp.task('parse_css_vinyl2', function() {
+gulp.task('check-css-classname2', function() {
   var checkdepen = transform(function(filename) {
     return map(function(chunk, next) {
-      return next(null, op2(chunk.toString()))
+      return next(null, checkcss2(chunk.toString()))
     })
   })
   gulp.src('sass/**/*.s+(a|c)ss')
@@ -72,7 +72,7 @@ gulp.task('parse_css_vinyl2', function() {
     
 })
 //For accessibility
-gulp.task('test', function() {
+gulp.task('test-accessibility', function() {
   return gulp.src(['./**/*.html','./**/*.css'])
     .pipe(access({
       force: true
@@ -95,5 +95,5 @@ gulp.task('checkdependency', function() {
     .pipe(checkdepen)    
 })
 gulp.task('default', [], function () {
-    runSequence(['lint','sass','checkdependency'],'parse_css_vinyl','parse_css_vinyl2','test')
+    runSequence(['lint','sasslinting','checkdependency'],'check-css-classname','check-css-classname2','test-accessibility')
 });
