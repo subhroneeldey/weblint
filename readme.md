@@ -86,8 +86,33 @@ gulp sasslinting
 //For Mac Users
 sudo gulp sasslinting 
 ```
+## 3)  Performs linting on the css files using lint-css() using stylelint  which is licensed under MIT.
 
-## 3) Ensures that all controllers, directives, filters, modules, services are prefixed by their partner names. 
+**CODE:**
+In gulpfile.js
+```javascript
+//For linting css
+gulp.task('lint-css', function lintCssTask() {
+    return gulp.src('./**/*.css')
+    .pipe(gulpStylelint({
+      reporters: [
+        {formatter: 'string', console: true}
+      ],
+      config : {  "extends": "stylelint-config-standard"}
+    }));
+});
+
+```
+
+**HOW TO USE:** 
+Use the required command
+```shell
+gulp lint-css
+//For Mac Users
+sudo gulp lint-css
+```
+
+## 4) Ensures that all controllers, directives, filters, modules, services are prefixed by their partner names. 
 
 **CODE:**
 In .eslintrc.json
@@ -108,7 +133,7 @@ gulp lint
 sudo gulp lint 
 ```
 
-## 4)  Ensures that the css files are prefixed by the partner names
+## 5)  Ensures that the css files are prefixed by the partner names
 
 **CODE:**
 In gulpfile.js
@@ -177,7 +202,7 @@ sudo gulp check-css-classname
 sudo gulp check-css-classname2
 ```
 
-## 5) Checks for any duplicate redundancies so that there are no chances of overwriting the versions of the dependencies
+## 6) Checks for any duplicate redundancies so that there are no chances of overwriting the versions of the dependencies
 
 **CODE:**
 In gulpfile.js
@@ -218,7 +243,7 @@ gulp checkdependency
 sudo gulp checkdependency
 ```
 
-## 6) It checks whether the html and css files follow the accessibility guidelines and reports necessary errors in a separate file
+## 7) It checks whether the html and css files follow the accessibility guidelines and reports necessary errors in a separate file
 
 **CODE:**
 In gulpfile.js

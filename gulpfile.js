@@ -38,7 +38,6 @@ gulp.task('sasslinting', function () {
     .pipe(sassLint.failOnError())
 });
 //For linting css
-
 gulp.task('lint-css', function lintCssTask() {
     return gulp.src('./**/*.css')
     .pipe(gulpStylelint({
