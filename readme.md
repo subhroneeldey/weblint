@@ -128,7 +128,24 @@ gulp.task('check-css-classname2', function() {
 })
 ```
 
-**HOW TO USE:** 
+**HOW TO USE:**
+
+Replace the partner name in the regex expression which is by default given as partnername in both function checkcss() and checkcss2().
+
+1)
+
+```javascript
+function checkcss(chunk){
+    util.log(util.colors.red("These classes should be prefixed with partnername : "));
+    let test = chunk.match(/(^|}[\n\s]*)[\s]*(\.|#)[\s]*(?!partnername)[a-zA-Z1234567890_-]+((\s[a-zA-Z1234567890_-\s]+{)|[\s]*{)/gm).toString();//Change Partnername in the regex as required
+```
+2)
+
+```javascript
+function checkcss2(chunk){
+    let test = chunk.match(/(\.|#)partnername\..+{/gm).toString();//Change Partnername in the regex as required
+```
+
 Use the required command
 ```shell
 gulp check-css-classname
@@ -155,6 +172,23 @@ gulp.task('checkdependency', function() {
 ```
 
 **HOW TO USE:** 
+
+ In the Angulardependencies.js file replace the partner name in the regex expression which is by default given as partnername for the two instances.
+
+**[NOTE FOR MAIN APPLICATION USER]**
+
+In the Angulardependencies.js file mention the dependencies of your project in the fxp array.
+**In Angulardependency.js**
+```javascript
+var fs=require('fs')
+var gutil = require('gulp-util');
+var path = require('path');
+var fxparray=["a","d"];// Main application must mention their dependencies here
+var moduleRegex = /\.module\(\s*("partnername"|'partnername')\s*,\s*(\[[^\]]*\])/g;
+//Change Partnername here
+
+```
+
 Use the required command
 ```shell
 gulp checkdependency
