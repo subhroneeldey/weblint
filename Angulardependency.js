@@ -2,9 +2,8 @@
 var fs=require('fs')
 var gutil = require('gulp-util');
 var path = require('path');
-var partnername="app";//Change Partner Name here
-var fxparray=["a","d"];// fxp dependies 
-var moduleRegex = /\.module\(\s*("app"|'app')\s*,\s*(\[[^\]]*\])/g;
+var fxparray=["a","d"];// Main application must mention their dependencies here
+var moduleRegex = /\.module\(\s*("partnername"|'partnername')\s*,\s*(\[[^\]]*\])/g;//Change Partnername here
 //var contents = file.contents.toString();
 var m=fxparray.length;
 
