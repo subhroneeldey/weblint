@@ -1,6 +1,6 @@
 # A static code analyzer tool.
 
-## To deal with partner applications, prevent overwriting of styles, ensure certain naming convention for partners and ensure accessibility guidelines 
+## To perform linting, deal with partner applications, prevent overwriting of styles, ensure certain naming convention for partners and ensure accessibility guidelines 
 
 **>GENERAL INSTALLATION GUIDELINES:**
 
