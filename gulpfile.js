@@ -50,9 +50,10 @@ gulp.task('sasslinting', ['readconfig'], function () {
                    .pipe(sassLint({
                         options:  {
                          formatter:  'stylish'}}))
-                  .pipe(sassLint.format(file));
+                  .pipe(sassLint.format(file));
                   stream.on('finish',  function ()  {
                   file.end(); });
+    console.log("Number of Errors : "+sassLint.length);
   console.log("Sass Linting Errors output on reports/sass-linting-errors/lint_sass.csv");
       return  stream;
 });
