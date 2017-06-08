@@ -1,35 +1,38 @@
-
-var fs=require('fs')
+var fs = require('fs')
 var gutil = require('gulp-util');
 var path = require('path');
-var fxparray=["a","d"];// Main application must mention their dependencies here
+var fxpModule = ["a", "d"];
 var moduleRegex = /\.module\(\s*("partnername"|'partnername')\s*,\s*(\[[^\]]*\])/g;//Change Partnername here
-//var contents = file.contents.toString();
-var m=fxparray.length;
-
-module.exports=function(file){
-var results = moduleRegex.exec(file);
-
-//console.log(results)
-if(results==null)
- {
-     console.log("No module of partner found");
-     return;
- }
-var arr=results[2];
-arr=eval(arr)
-var n= arr.length;
-if(n==0)
-{
-     console.log("No dependency of partner found ");
-     return;
-}
-for(var i=0;i<n;i++)
-{
-    for(var j=0;j<m;j++)
-    {
-        if(arr[i]===fxparray[j])
-        console.log("Same dependendency : " +arr[i]);
+var fxpModuleCount = fxpModule.length;
+module.exports = function (file) {
+    var moduleDependencies = getModuleDependencies();
+    if (moduleDependencies == null) {
+        console.log("No partner module found");
+        return;
     }
-}
+    var dependencies = getDependencies();
+    var dependenciesCount = dependencies.length;
+    if (dependenciesCount == 0) {
+        console.log("No dependency of partner found ");
+        return;
+    }
+
+    checkIfValidDependency();
+
+
+    function getModuleDependencies() {
+        return moduleRegex.exec(file);
+    }
+
+    function getDependencies() {
+        return eval(moduleDependencies[2]);
+    }
+    function checkIfValidDependency() {
+        for (var i = 0; i < dependenciesCount; i++) {
+            for (var j = 0; j < fxpModuleCount; j++) {
+                if (dependencies[i] === fxpModule[j])
+                    console.log("Same dependendency : " + dependencies[i]);
+            }
+        }
+    }
 }
