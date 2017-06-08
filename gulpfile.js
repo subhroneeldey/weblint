@@ -45,17 +45,14 @@ gulp.task('lint', ['readconfig'], () => {
 
 //For linting scss and sass
 gulp.task('sasslinting', ['readconfig'], function () {
-  var  file  =  fs.createWriteStream('reports/sass-linting-errors/lint_sass.csv');
-      var  stream  =  gulp.src(sass_path)
-            .pipe(sassLint({
-                  options:  {
-                        formatter:  'stylish'
-                  }
-            }))
-            .pipe(sassLint.format(file));
-      stream.on('finish',  function ()  {
-            file.end();
-      });
+   var  file  =  fs.createWriteStream('reports/sass-linting-errors/lint_sass.csv');
+   var  stream  =  gulp.src(sass_path)
+                   .pipe(sassLint({
+                        options:  {
+                         formatter:  'stylish'}}))
+                  .pipe(sassLint.format(file));
+                  stream.on('finish',  function ()  {
+                  file.end(); });
   console.log("Sass Linting Errors output on reports/sass-linting-errors/lint_sass.csv");
       return  stream;
 });
