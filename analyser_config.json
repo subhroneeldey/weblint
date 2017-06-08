@@ -1,0 +1,6 @@
+{
+    "jsRoot": "./javascript",
+    "sassRoot": "./sass",
+    "cssRoot":"./css",
+    "htmlRoot":"./html"
+}

@@ -15,16 +15,28 @@ let rename = require("gulp-rename");
 var plumber = require('gulp-plumber');
 var runSequence = require('run-sequence');
 var gulpStylelint = require('gulp-stylelint');
+var fs = require('fs');
+var css_path = "/**/*.css", html_path = "/**/*.html", js_path = "/**/*.js", sass_path = "/**/*.s+(a|c)ss";
+//Reads source paths from analyser_config.json
+gulp.task('readconfig', function () {
+  var pathcontent = fs.readFile("analyser_config.json");
+  var jsonpath = JSON.parse(pathcontent);
+  css_path = jsonpath.cssRoot + css_path;
+  html_path = jsonpath.htmlRoot + html_path;
+  js_path = jsonpath.jsRoot + js_path;
+  sass_path = jsonpath.sassRoot + sass_path;
+
+});
 //For linting JavaScript files
 gulp.task('lint', () => {
-  return gulp.src('javascript/**/*.js')
+  return gulp.src(js_path)
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
 //For linting scss and sass
 gulp.task('sasslinting', function () {
-  return gulp.src('sass/**/*.s+(a|c)ss')
+  return gulp.src(sass_path)
     .pipe(sassLint())
     .pipe(sassLint.format())
 
@@ -32,7 +44,7 @@ gulp.task('sasslinting', function () {
 });
 //For linting css
 gulp.task('lint-css', function lintCssTask() {
-  return gulp.src('./**/*.css')
+  return gulp.src(css_path)
     .pipe(gulpStylelint({
       reporters: [
         { formatter: 'string', console: true }
@@ -53,7 +65,7 @@ gulp.task('check-css-classname', function () {
       return next(null, checkcss(chunk.toString()))
     })
   })
-  gulp.src('sass/**/*.s+(a|c)ss')
+  gulp.src(sass_path)
     .pipe(checkdepen)
 })
 function checkcss2(chunk) {
@@ -67,13 +79,13 @@ gulp.task('check-css-classname2', function () {
       return next(null, checkcss2(chunk.toString()))
     })
   })
-  gulp.src('sass/**/*.s+(a|c)ss')
+  gulp.src(sass_path)
     .pipe(checkdepen)
 
 })
 //For testing whether accessibility standards are satisfied
 gulp.task('test-accessibility', function () {
-  return gulp.src(['./**/*.html', './**/*.css'])
+  return gulp.src([html_path, css_path])
     .pipe(access({
       force: true
     }))
@@ -91,9 +103,9 @@ gulp.task('checkdependency', function () {
       return next(null, checkangular(chunk.toString()))
     })
   })
-  gulp.src('javascript/*.js')
+  gulp.src(js_path)
     .pipe(checkdepen)
 })
-gulp.task('default', [], function () {
+gulp.task('default', [readconfig], function () {
   runSequence(['lint', 'lint-css', 'sasslinting', 'checkdependency'], 'check-css-classname', 'check-css-classname2', 'test-accessibility')
 });
