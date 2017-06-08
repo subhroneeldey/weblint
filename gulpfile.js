@@ -31,8 +31,13 @@ gulp.task('readconfig', function () {
 gulp.task('lint',['readconfig'] , () => {
   return gulp.src(js_path)
     .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
+    .pipe(eslint.result(result => {
+        // Called for each ESLint result. 
+        console.log(`ESLint result: ${result.filePath}`);
+        console.log(`# Messages: ${result.messages.length}`);
+        console.log(`# Warnings: ${result.warningCount}`);
+        console.log(`# Errors: ${result.errorCount}`);
+    }));
 });
 //For linting scss and sass
 gulp.task('sasslinting',['readconfig'] , function () {
@@ -93,7 +98,7 @@ gulp.task('test-accessibility',['readconfig'] , function () {
     .pipe(rename({
       extname: '.csv'
     }))
-    .pipe(gulp.dest('reports/csv'));
+    .pipe(gulp.dest('reports/test-accessibility-errors/'));
 });
 //To prevent overwriting of libraries and check for dependencies
 gulp.task('checkdependency',['readconfig'] ,function () {
