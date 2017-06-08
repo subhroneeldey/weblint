@@ -89,11 +89,11 @@ gulp.task('test-accessibility',['readconfig'] , function () {
       force: true
     }))
     .on('error', console.log)
-    .pipe(access.report({ reportType: 'txt' }))
+    .pipe(access.report({ reportType: 'csv' }))
     .pipe(rename({
-      extname: '.txt'
+      extname: '.csv'
     }))
-    .pipe(gulp.dest('reports/txt'));
+    .pipe(gulp.dest('reports/csv'));
 });
 //To prevent overwriting of libraries and check for dependencies
 gulp.task('checkdependency',['readconfig'] ,function () {
@@ -106,5 +106,5 @@ gulp.task('checkdependency',['readconfig'] ,function () {
     .pipe(checkdepen)
 })
 gulp.task('default', ['readconfig'], function () {
-  runSequence(['lint', 'lint-css', 'sasslinting', 'checkdependency'], 'check-css-classname', 'check-css-classname2', 'test-accessibility')
+  runSequence(['lint', 'lint-css', 'sasslinting', 'checkdependency','test-accessibility'], 'check-css-classname', 'check-css-classname2')
 });
