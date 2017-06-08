@@ -16,6 +16,8 @@ var plumber = require('gulp-plumber');
 var runSequence = require('run-sequence');
 var gulpStylelint = require('gulp-stylelint');
 var fs = require('fs');
+var Writable = require('stream').Writable;
+var wstream = fs.createWriteStream('reports/eslint-errors/lintingerrors.csv');
 var css_path = "/**/*.css", html_path = "/**/*.html", js_path = "/**/*.js", sass_path = "/**/*.s+(a|c)ss";
 //Reads source paths from analyser_config.json
 gulp.task('readconfig', function () {
@@ -37,8 +39,10 @@ gulp.task('lint',['readconfig'] , () => {
         console.log(`# Messages: ${result.messages.length}`);
         console.log(`# Warnings: ${result.warningCount}`);
         console.log(`# Errors: ${result.errorCount}`);
-    }));
+    }))
+    .pipe(eslint.formatEach('stylish',wstream))
 });
+
 //For linting scss and sass
 gulp.task('sasslinting',['readconfig'] , function () {
   return gulp.src(sass_path)
