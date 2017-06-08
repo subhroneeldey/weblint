@@ -1,6 +1,6 @@
 {
-    "jsRoot": "./javascript",
-    "sassRoot": "./sass",
-    "cssRoot":"./css",
-    "htmlRoot":"./html"
+    "jsRoot": "Sample/javascript",
+    "sassRoot":"Sample/sass",
+    "cssRoot":"Sample/css",
+    "htmlRoot":"Sample/html"
 }

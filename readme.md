@@ -22,6 +22,15 @@ If you want to run any specific method of the gulpfile.js type gulp followed by 
 
 
 > ##  INSTRUCTION FOR PARTNERS:
+> * Mention the path of your javascript, CSS, HTML, SASS files in analyser_config.json
+>```json
+>{
+>   "jsRoot": "Sample/javascript",
+>   "sassRoot":"Sample/sass",
+>   "cssRoot":"Sample/css",
+>   "htmlRoot":"Sample/html"
+>}
+>```
 > * In the gulpfile.js, in function checkcss() and checkcss2()., replace > the partner name in the regex expression which is by default given as > partnername.
 > ```javascript
 > function checkcss(chunk){
@@ -279,4 +288,5 @@ sudo gulp test-accessibility
 ## AUTHOR: Subhroneel Dey
 ## Mail : subhroneeldey4@gmail.com
 ## Available on Github : https://github.com/subhroneeldey/weblint/blob/master/readme.md
+
 ![myimage-alt-tag](./Subhroneel.jpg)

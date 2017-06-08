@@ -19,7 +19,7 @@ var fs = require('fs');
 var css_path = "/**/*.css", html_path = "/**/*.html", js_path = "/**/*.js", sass_path = "/**/*.s+(a|c)ss";
 //Reads source paths from analyser_config.json
 gulp.task('readconfig', function () {
-  var pathcontent = fs.readFile("analyser_config.json");
+  var pathcontent = fs.readFileSync("analyser_config.json");
   var jsonpath = JSON.parse(pathcontent);
   css_path = jsonpath.cssRoot + css_path;
   html_path = jsonpath.htmlRoot + html_path;
@@ -106,6 +106,6 @@ gulp.task('checkdependency', function () {
   gulp.src(js_path)
     .pipe(checkdepen)
 })
-gulp.task('default', [readconfig], function () {
+gulp.task('default', ['readconfig'], function () {
   runSequence(['lint', 'lint-css', 'sasslinting', 'checkdependency'], 'check-css-classname', 'check-css-classname2', 'test-accessibility')
 });
