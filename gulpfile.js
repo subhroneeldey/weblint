@@ -79,13 +79,28 @@ gulp.task('sasslinting', ['readconfig'], function () {
 });
 //For linting css
 gulp.task('lint-css', ['readconfig'], function lintCssTask() {
-  return gulp.src(css_path)
+  if(jsonpath.csslinting_choice===0)
+  {
+    return gulp.src(css_path)
+      .pipe(gulpStylelint({
+        failAfterError: true,
+        reportOutputDir: 'reports/csslinting_errors',
+        reporters: [
+         { formatter: 'string', save:'css_lint.csv' }
+        ],
+        config: { "extends": "stylelint-config-standard" }
+      }));
+  }
+  else
+  {
+    return gulp.src(css_path)
     .pipe(gulpStylelint({
       reporters: [
         { formatter: 'string', console: true }
       ],
       config: { "extends": "stylelint-config-standard" }
     }));
+  }
 });
 //For parsing and checking whether css classes and id are prefixed with partnername
 function checkcss(chunk) {
@@ -108,7 +123,7 @@ function checkcss2(chunk) {
   test = test.replace(/[},{\.\s]/g, ' ');
   util.log(util.colors.yellow(test));
 }
-gulp.task('check-css-classname2', runSequence('readconfig','check-css-classname'), function () {
+gulp.task('check-css-classname2', ['readconfig','check-css-classname'], function () {
   var checkdepen = transform(function (filename) {
     return map(function (chunk, next) {
       return next(null, checkcss2(chunk.toString()))

@@ -1,0 +1,87 @@
+
+Sample/css/index.css
+  20:1   ×  Expected empty line before at-rule                             at-rule-empty-line-before                
+  28:3   ×  Expected newline after ","                                     selector-list-comma-newline-after        
+  28:7   ×  Expected newline after ","                                     selector-list-comma-newline-after        
+  28:11  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+  28:15  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+  28:19  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+  29:3   ×  Unexpected longhand value '0 0 30px 0' instead of '0 0 30px'   shorthand-property-no-redundant-values   
+  57:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+  57:8   ×  Expected newline after ","                                     selector-list-comma-newline-after        
+  57:17  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+  78:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+  81:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+  84:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+  84:11  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+  84:24  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+  94:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+  94:19  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+  94:39  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+  98:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 103:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 103:31  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 103:63  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 113:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 113:19  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 113:39  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 117:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 122:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 122:31  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 122:63  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 132:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 132:16  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 132:33  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 136:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 141:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 141:28  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 141:57  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 151:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 151:19  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 151:39  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 155:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 160:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 160:31  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 160:63  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 170:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 170:18  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 170:37  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 174:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 179:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 179:30  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 179:61  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 196:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 196:19  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 196:39  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 203:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 203:19  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 203:39  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 210:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 210:19  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 210:39  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 217:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 217:16  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 217:33  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 224:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 224:19  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 224:39  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 231:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 231:18  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 231:37  ×  Expected newline after ","                                     selector-list-comma-newline-after        
+ 241:3   ×  Unexpected duplicate "display"                                 declaration-block-no-duplicate-properties
+ 248:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 258:3   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 262:3   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 266:3   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 271:1   ×  Expected empty line before at-rule                             at-rule-empty-line-before                
+ 276:3   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 280:3   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 284:3   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 289:1   ×  Expected empty line before at-rule                             at-rule-empty-line-before                
+ 294:3   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 298:3   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 302:3   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 307:1   ×  Expected empty line before rule                                rule-empty-line-before                   
+ 323:10  ×  Expected "#ffffff" to be "#fff"                                color-hex-length                         
+ 331:10  ×  Expected "#ffffff" to be "#fff"                                color-hex-length
+
