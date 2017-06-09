@@ -131,7 +131,11 @@ gulp.task('sasslinting', ['readconfig'], function () {
 });
 //For linting css
 gulp.task('lint-css', ['readconfig'], function lintCssTask() {
-  if(jsonpath.csslinting_choice===0)
+  if(jsonpath.csslinting_choice==="off")
+  {
+      return;
+  }
+  else if(jsonpath.csslinting_choice==="file")
   {
     return gulp.src(css_path)
       .pipe(gulpStylelint({
@@ -143,7 +147,7 @@ gulp.task('lint-css', ['readconfig'], function lintCssTask() {
         config: { "extends": "stylelint-config-standard" }
       }));
   }
-  else
+  else if(jsonpath.csslinting_choice==="console")
   {
     return gulp.src(css_path)
     .pipe(gulpStylelint({
@@ -152,6 +156,12 @@ gulp.task('lint-css', ['readconfig'], function lintCssTask() {
       ],
       config: { "extends": "stylelint-config-standard" }
     }));
+  }
+  else
+  {
+    console.log(util.colors.red("Configuration value for csslinting_choice not set correctly"));
+    console.log(util.colors.red("Choose 'off', 'console', 'file'"));
+    return;
   }
 });
 //For parsing and checking whether css classes and id are prefixed with partnername
