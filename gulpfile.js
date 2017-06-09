@@ -38,7 +38,7 @@ gulp.task('lint', ['readconfig'], () => {
   }
   else if(jsonpath.eslinting_choice==="console")
   {
-    return print_eslint_errors_console
+    return print_eslint_errors_console();
   }
   else
   {
@@ -133,10 +133,30 @@ gulp.task('sasslinting', ['readconfig'], function () {
 gulp.task('lint-css', ['readconfig'], function lintCssTask() {
   if(jsonpath.csslinting_choice==="off")
   {
-      return;
+      return print_csslint_errors_off();
   }
   else if(jsonpath.csslinting_choice==="file")
   {
+    return print_csslint_errors_file();
+  }
+  else if(jsonpath.csslinting_choice==="console")
+  {
+    return print_csslint_errors_console();
+  }
+  else
+  {
+    return print_csslint_errors_incorrectselection();
+  }
+
+
+  function print_csslint_errors_off()
+  {
+    return;
+  }
+  function print_csslint_errors_file()
+  {
+    console.log(util.colors.green("CSSLINT"));
+    console.log(util.colors.green("CSS Linting Errors output on reports/csslinting_errors/css_lint.csv"));
     return gulp.src(css_path)
       .pipe(gulpStylelint({
         failAfterError: true,
@@ -147,7 +167,7 @@ gulp.task('lint-css', ['readconfig'], function lintCssTask() {
         config: { "extends": "stylelint-config-standard" }
       }));
   }
-  else if(jsonpath.csslinting_choice==="console")
+  function print_csslint_errors_console()
   {
     return gulp.src(css_path)
     .pipe(gulpStylelint({
@@ -157,12 +177,12 @@ gulp.task('lint-css', ['readconfig'], function lintCssTask() {
       config: { "extends": "stylelint-config-standard" }
     }));
   }
-  else
+  function print_csslint_errors_incorrectselection()
   {
     console.log(util.colors.red("Configuration value for csslinting_choice not set correctly"));
     console.log(util.colors.red("Choose 'off', 'console', 'file'"));
     return;
-  }
+  } 
 });
 //For parsing and checking whether css classes and id are prefixed with partnername
 function checkcss(chunk) {
