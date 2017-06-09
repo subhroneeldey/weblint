@@ -18,10 +18,11 @@ var gulpStylelint = require('gulp-stylelint');
 var fs = require('fs');
 var eslint_wstream = fs.createWriteStream('reports/eslint-errors/lintingerrors.csv');
 var css_path = "/**/*.css", html_path = "/**/*.html", js_path = "/**/*.js", sass_path = "/**/*.s+(a|c)ss";
+var jsonpath;
 //Reads source paths from analyser_config.json
 gulp.task('readconfig', function () {
   var pathcontent = fs.readFileSync("analyser_config.json");
-  var jsonpath = JSON.parse(pathcontent);
+  jsonpath = JSON.parse(pathcontent);
   css_path = jsonpath.cssRoot + "/**/*.css";
   html_path = jsonpath.htmlRoot + "/**/*.html";
   js_path = jsonpath.jsRoot + "/**/*.js";
@@ -29,31 +30,52 @@ gulp.task('readconfig', function () {
 });
 //For linting JavaScript files
 gulp.task('lint', ['readconfig'], () => {
-  return gulp.src(js_path)
+  if(jsonpath.eslinting_choice===0)
+  {
+    return gulp.src(js_path)
+      .pipe(eslint())
+      .pipe(eslint.result(result  =>  {
+                // Called for each ESLint result. 
+                console.log(`ESLint result: ${result.filePath}`);
+                console.log(`# Messages: ${result.messages.length}`);
+                console.log(`# Warnings: ${result.warningCount}`);
+                console.log(`# Errors: ${result.errorCount}`);
+         }))
+      .pipe(eslint.formatEach('stylish', eslint_wstream))
+  }
+  else
+  {
+    return gulp.src(js_path)
     .pipe(eslint())
-    .pipe(eslint.result(result  =>  {
-              // Called for each ESLint result. 
-              console.log(`ESLint result: ${result.filePath}`);
-              console.log(`# Messages: ${result.messages.length}`);
-              console.log(`# Warnings: ${result.warningCount}`);
-              console.log(`# Errors: ${result.errorCount}`);
-        }))
-    .pipe(eslint.formatEach('stylish', eslint_wstream))
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+  }
 });
 
 //For linting scss and sass
 gulp.task('sasslinting', ['readconfig'], function () {
    var  file  =  fs.createWriteStream('reports/sass-linting-errors/lint_sass.csv');
-   var  stream  =  gulp.src(sass_path)
-                   .pipe(sassLint({
-                        options:  {
-                         formatter:  'stylish'}}))
-                  .pipe(sassLint.format(file));
-                  stream.on('finish',  function ()  {
-                  file.end(); });
-    console.log("Number of Errors : "+sassLint.length);
-  console.log("Sass Linting Errors output on reports/sass-linting-errors/lint_sass.csv");
+   if(jsonpath.sasslinting_choice===0)
+   {
+    var  stream  =  gulp.src(sass_path)
+                     .pipe(sassLint({
+                           options:  {
+                           formatter:  'stylish'}}))
+                    .pipe(sassLint.format(file));
+                    stream.on('finish',  function ()  {
+                    file.end(); });
+      console.log("Number of Errors : "+sassLint.length);
+      console.log("Sass Linting Errors output on reports/sass-linting-errors/lint_sass.csv");
       return  stream;
+   }
+   else
+   {
+     return gulp.src(sass_path)
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+
+    .pipe(sassLint.failOnError());
+   }
 });
 //For linting css
 gulp.task('lint-css', ['readconfig'], function lintCssTask() {
@@ -86,7 +108,7 @@ function checkcss2(chunk) {
   test = test.replace(/[},{\.\s]/g, ' ');
   util.log(util.colors.yellow(test));
 }
-gulp.task('check-css-classname2', ['readconfig'], function () {
+gulp.task('check-css-classname2', runSequence('readconfig','check-css-classname'), function () {
   var checkdepen = transform(function (filename) {
     return map(function (chunk, next) {
       return next(null, checkcss2(chunk.toString()))
@@ -120,5 +142,5 @@ gulp.task('checkdependency', ['readconfig'], function () {
     .pipe(checkdepen)
 })
 gulp.task('default', ['readconfig'], function () {
-  runSequence(['lint', 'lint-css', 'sasslinting', 'checkdependency', 'test-accessibility'], 'check-css-classname', 'check-css-classname2')
+  runSequence(['lint', 'lint-css', 'sasslinting', 'checkdependency', 'test-accessibility', 'check-css-classname2'])
 });
