@@ -30,32 +30,60 @@ gulp.task('readconfig', function () {
 });
 //For linting JavaScript files
 gulp.task('lint', ['readconfig'], () => {
-  if(jsonpath.eslinting_choice===0)
+  if(jsonpath.eslinting_choice==="off")
+  return print_eslint_errors_off();
+  else if(jsonpath.eslinting_choice==="file")
   {
-    return gulp.src(js_path)
+    return print_eslint_errors_file();
+  }
+  else if(jsonpath.eslinting_choice==="console")
+  {
+    return print_eslint_errors_console
+  }
+  else
+  {
+    return print_eslint_errors_incorrectselection();
+  }
+  function print_eslint_errors_file()
+  {
+      return gulp.src(js_path)
       .pipe(eslint())
       .pipe(eslint.result(result  =>  {
                 // Called for each ESLint result. 
-                console.log(`ESLint result: ${result.filePath}`);
-                console.log(`# Messages: ${result.messages.length}`);
-                console.log(`# Warnings: ${result.warningCount}`);
-                console.log(`# Errors: ${result.errorCount}`);
+                console.log(util.colors.green(`ESLint result: ${result.filePath}`));
+                console.log(util.colors.green(`# Messages: ${result.messages.length}`));
+                console.log(util.colors.green(`# Warnings: ${result.warningCount}`));
+                console.log(util.colors.green(`# Errors: ${result.errorCount}`));
+                console.log("ESLinting Errors output on reports/eslint-errors/lintingerrors.csv");
          }))
-      .pipe(eslint.formatEach('stylish', eslint_wstream))
+      .pipe(eslint.formatEach('stylish', eslint_wstream));
   }
-  else
+  function print_eslint_errors_console()
   {
     return gulp.src(js_path)
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
   }
+  function print_eslint_errors_off()
+  {
+    return;
+  }
+  function print_eslint_errors_incorrectselection()
+  {
+    console.log(util.colors.red("Configuration value for eslinting_choice not set correctly"));
+    console.log(util.colors.red("Choose 'off', 'console, 'file"));
+    return;
+  }
 });
-
 //For linting scss and sass
 gulp.task('sasslinting', ['readconfig'], function () {
    var  file  =  fs.createWriteStream('reports/sass-linting-errors/lint_sass.csv');
-   if(jsonpath.sasslinting_choice===0)
+   if(jsonpath.sasslinting_choice==="file")
+   {
+      return;
+   }
+   else if(jsonpath.sasslinting_choice==="file")
    {
     var  stream  =  gulp.src(sass_path)
                      .pipe(sassLint({
@@ -68,13 +96,17 @@ gulp.task('sasslinting', ['readconfig'], function () {
       console.log("Sass Linting Errors output on reports/sass-linting-errors/lint_sass.csv");
       return  stream;
    }
-   else
+   else if(jsonpath.sasslinting_choice==="console")
    {
      return gulp.src(sass_path)
     .pipe(sassLint())
     .pipe(sassLint.format())
 
     .pipe(sassLint.failOnError());
+   }
+   else
+   {
+
    }
 });
 //For linting css
@@ -135,11 +167,12 @@ gulp.task('check-css-classname2', ['readconfig','check-css-classname'], function
 })
 //For testing whether accessibility standards are satisfied
 gulp.task('test-accessibility', ['readconfig'], function () {
-  if(jsonpath.test-accessibility_choice===0)
+  if(jsonpath.test_accessibility_choice===0)
   {
   return gulp.src([html_path, css_path])
     .pipe(access({
-      force: true;
+      force: true,
+      verbose: false
     }))
    .on('error', console.log)
     .pipe(access.report({ reportType: 'csv' }))

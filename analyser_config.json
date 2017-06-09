@@ -3,10 +3,10 @@
     "sassRoot":"Sample/sass",
     "cssRoot":"Sample/css",
     "htmlRoot":"Sample/html",
-    "eslinting_choice":0,
-    "sasslinting_choice":0,
-    "csslinting_choice":0,
-    "class-name-prefix_choice":0,
-    "dependencycheck_choice":0,
-    "test-accessibility_choice":0
+    "eslinting_choice":"file",
+    "sasslinting_choice":"file",
+    "csslinting_choice":"file",
+    "class-name-prefix_choice":"file",
+    "dependencycheck_choice":"file",
+    "test_accessibility_choice":"file"
 }
