@@ -17,7 +17,6 @@ var runSequence = require('run-sequence');
 var gulpStylelint = require('gulp-stylelint');
 var fs = require('fs');
 var eslint_wstream = fs.createWriteStream('reports/eslint-errors/lintingerrors.csv');
-var wstream=fs.createWriteStream('abc.txt');
 //var sasslint_wstream = fs.createWriteStream('reports/sasslint-errors/sass-lintingerrors.csv');
 var css_path = "/**/*.css", html_path = "/**/*.html", js_path = "/**/*.js", sass_path = "/**/*.s+(a|c)ss";
 //Reads source paths from analyser_config.json
