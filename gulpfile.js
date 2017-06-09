@@ -81,15 +81,15 @@ gulp.task('sasslinting', ['readconfig'], function () {
    var  file  =  fs.createWriteStream('reports/sass-linting-errors/lint_sass.csv');
    if(jsonpath.sasslinting_choice==="off")
    {
-      print_sasslint_errors_off();
+     return print_sasslint_errors_off();
    }
    else if(jsonpath.sasslinting_choice==="file")
    {
-      print_sasslint_errors_file();
+     return print_sasslint_errors_file();
    }
    else if(jsonpath.sasslinting_choice==="console")
    {
-     print_sasslint_errors_console();
+     return print_sasslint_errors_console();
    }
    else
    {
@@ -99,7 +99,7 @@ gulp.task('sasslinting', ['readconfig'], function () {
    {
       return;
    }
-   
+
     function print_sasslint_errors_file()
    {
      var  stream  =  gulp.src(sass_path)
