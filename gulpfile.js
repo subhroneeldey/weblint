@@ -135,16 +135,27 @@ gulp.task('check-css-classname2', ['readconfig','check-css-classname'], function
 })
 //For testing whether accessibility standards are satisfied
 gulp.task('test-accessibility', ['readconfig'], function () {
+  if(jsonpath.test-accessibility_choice===0)
+  {
   return gulp.src([html_path, css_path])
     .pipe(access({
-      force: true
+      force: true;
     }))
-    .on('error', console.log)
+   .on('error', console.log)
     .pipe(access.report({ reportType: 'csv' }))
     .pipe(rename({
       extname: '.csv'
     }))
     .pipe(gulp.dest('reports/test-accessibility-errors/'));
+  }
+  else
+  {
+    return gulp.src([html_path, css_path])
+      .pipe(access({
+        force: true
+     }))
+    .on('error', console.log);
+  }
 });
 //To prevent overwriting of libraries and check for dependencies
 gulp.task('checkdependency', ['readconfig'], function () {
