@@ -81,22 +81,40 @@ gulp.task('sasslinting', ['readconfig'], function () {
    var  file  =  fs.createWriteStream('reports/sass-linting-errors/lint_sass.csv');
    if(jsonpath.sasslinting_choice==="off")
    {
-      return;
+      print_sasslint_errors_off();
    }
    else if(jsonpath.sasslinting_choice==="file")
    {
-    var  stream  =  gulp.src(sass_path)
+      print_sasslint_errors_file();
+   }
+   else if(jsonpath.sasslinting_choice==="console")
+   {
+     print_sasslint_errors_console();
+   }
+   else
+   {
+      return print_sasslint_errors_incorrectselection();
+   }
+   function print_sasslint_errors_off()
+   {
+      return;
+   }
+   
+    function print_sasslint_errors_file()
+   {
+     var  stream  =  gulp.src(sass_path)
                      .pipe(sassLint({
                            options:  {
                            formatter:  'stylish'}}))
                     .pipe(sassLint.format(file));
                     stream.on('finish',  function ()  {
                     file.end(); });
-      console.log("Number of Errors : "+sassLint.length);
-      console.log("Sass Linting Errors output on reports/sass-linting-errors/lint_sass.csv");
+      console.log(util.colors.green("SASSLINT"));
+      console.log(util.colors.green("Number of Errors : "+sassLint.length));
+      console.log(util.colors.green("Sass Linting Errors output on reports/sass-linting-errors/lint_sass.csv"));
       return  stream;
    }
-   else if(jsonpath.sasslinting_choice==="console")
+    function print_sasslint_errors_console()
    {
      return gulp.src(sass_path)
     .pipe(sassLint())
@@ -104,10 +122,12 @@ gulp.task('sasslinting', ['readconfig'], function () {
 
     .pipe(sassLint.failOnError());
    }
-   else
-   {
-
-   }
+   function print_sasslint_errors_incorrectselection()
+  {
+    console.log(util.colors.red("Configuration value for sasslinting_choice not set correctly"));
+    console.log(util.colors.red("Choose 'off', 'console', 'file'"));
+    return;
+  }
 });
 //For linting css
 gulp.task('lint-css', ['readconfig'], function lintCssTask() {
