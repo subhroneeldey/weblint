@@ -72,14 +72,14 @@ gulp.task('lint', ['readconfig'], () => {
   function print_eslint_errors_incorrectselection()
   {
     console.log(util.colors.red("Configuration value for eslinting_choice not set correctly"));
-    console.log(util.colors.red("Choose 'off', 'console, 'file"));
+    console.log(util.colors.red("Choose 'off', 'console', 'file'"));
     return;
   }
 });
 //For linting scss and sass
 gulp.task('sasslinting', ['readconfig'], function () {
    var  file  =  fs.createWriteStream('reports/sass-linting-errors/lint_sass.csv');
-   if(jsonpath.sasslinting_choice==="file")
+   if(jsonpath.sasslinting_choice==="off")
    {
       return;
    }
