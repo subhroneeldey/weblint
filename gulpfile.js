@@ -159,7 +159,7 @@ gulp.task('lint-css', ['readconfig'], function lintCssTask() {
     console.log(util.colors.green("CSS Linting Errors output on reports/csslinting_errors/css_lint.csv"));
     return gulp.src(css_path)
       .pipe(gulpStylelint({
-        failAfterError: true,
+        failAfterError: false,
         reportOutputDir: 'reports/csslinting_errors',
         reporters: [
          { formatter: 'string', save:'css_lint.csv' }
@@ -187,9 +187,12 @@ gulp.task('lint-css', ['readconfig'], function lintCssTask() {
 //For parsing and checking whether css classes and id are prefixed with partnername
 function checkcss(chunk) {
   util.log(util.colors.red("These classes should be prefixed with partnername : "));
-  let test = chunk.match(/(^|}[\n\s]*)[\s]*(\.|#)[\s]*(?!partnername)[a-zA-Z1234567890_-]+((\s[a-zA-Z1234567890_-\s]+{)|[\s]*{)/gm).toString();//Change Partnername in the regex as required
-  test = test.replace(/[},{\.\s]/g, ' ');
-  util.log(util.colors.yellow(test));
+  let invalidclasses = chunk.match(/(^|}[\n\s]*)[\s]*(\.|#)[\s]*(?!partnername)[a-zA-Z1234567890_-]+((\s[a-zA-Z1234567890_-\s]+{)|[\s]*{)/gm).toString();//Change Partnername in the regex as required
+  let invalidclasses2 = chunk.match(/(\.|#)partnername\..+{/gm).toString();//Change Partnername in the regex as required
+  invalidclasses = invalidclasses.replace(/[},{\.\s]/g, ' ');
+  invalidclasses2 = invalidclasses2.replace(/[},{\.\s]/g, ' ');
+  util.log(util.colors.yellow(invalidclasses));
+  util.log(util.colors.yellow(invalidclasses2));
 }
 gulp.task('check-css-classname', ['readconfig'], function () {
   var checkdepen = transform(function (filename) {
@@ -200,26 +203,33 @@ gulp.task('check-css-classname', ['readconfig'], function () {
   gulp.src(sass_path)
     .pipe(checkdepen)
 })
-function checkcss2(chunk) {
-  let test = chunk.match(/(\.|#)partnername\..+{/gm).toString();//Change Partnername in the regex as required
-  test = test.replace(/[},{\.\s]/g, ' ');
-  util.log(util.colors.yellow(test));
-}
-gulp.task('check-css-classname2', ['readconfig','check-css-classname'], function () {
-  var checkdepen = transform(function (filename) {
-    return map(function (chunk, next) {
-      return next(null, checkcss2(chunk.toString()))
-    })
-  })
-  gulp.src(sass_path)
-    .pipe(checkdepen)
-
-})
 //For testing whether accessibility standards are satisfied
 gulp.task('test-accessibility', ['readconfig'], function () {
-  if(jsonpath.test_accessibility_choice===0)
+  if(jsonpath.test_accessibility_choice==="off")
   {
-  return gulp.src([html_path, css_path])
+      return print_test_accessibility_off();
+  }
+  else if(jsonpath.test_accessibility_choice==='file')
+  {
+    return print_test_accessibility_file();
+  }
+  else if(jsonpath.test_accessibility_choice==='console')
+  {
+    return print_test_accessibility_console();
+  }
+  else
+  {
+    return print_test_accessibility_incorrectselection();
+  }
+  function print_test_accessibility_off()
+  {
+    return;
+  }
+  function print_test_accessibility_file()
+  {
+    console.log(util.colors.green("Testing Accessibility Requirements"));
+    console.log(util.colors.green("Accessibilty Errors output on reports/test-accessibility-errors/"));
+    return gulp.src([html_path, css_path])
     .pipe(access({
       force: true,
       verbose: false
@@ -231,13 +241,19 @@ gulp.task('test-accessibility', ['readconfig'], function () {
     }))
     .pipe(gulp.dest('reports/test-accessibility-errors/'));
   }
-  else
+  function print_test_accessibility_console()
   {
     return gulp.src([html_path, css_path])
       .pipe(access({
         force: true
      }))
     .on('error', console.log);
+  }
+  function print_test_accessibility_incorrectselection()
+  {
+    console.log(util.colors.red("Configuration value for test_accessibility_choice not set correctly"));
+    console.log(util.colors.red("Choose 'off', 'console', 'file'"));
+    return;
   }
 });
 //To prevent overwriting of libraries and check for dependencies
@@ -250,6 +266,6 @@ gulp.task('checkdependency', ['readconfig'], function () {
   gulp.src(js_path)
     .pipe(checkdepen)
 })
-gulp.task('default', ['readconfig'], function () {
-  runSequence(['lint', 'lint-css', 'sasslinting', 'checkdependency', 'test-accessibility', 'check-css-classname2'])
+gulp.task('default',  function () {
+  runSequence('readconfig',['lint',  'sasslinting', 'checkdependency', 'test-accessibility', 'check-css-classname'],'lint-css')
 });
