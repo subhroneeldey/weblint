@@ -6,7 +6,5 @@
     "eslinting_choice":"file",
     "sasslinting_choice":"file",
     "csslinting_choice":"file",
-    "class-name-prefix_choice":"file",
-    "dependencycheck_choice":"file",
     "test_accessibility_choice":"file"
 }

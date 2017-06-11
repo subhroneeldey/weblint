@@ -16,7 +16,6 @@ var plumber = require('gulp-plumber');
 var runSequence = require('run-sequence');
 var gulpStylelint = require('gulp-stylelint');
 var fs = require('fs');
-var eslint_wstream = fs.createWriteStream('reports/eslint-errors/lintingerrors.csv');
 var css_path = "/**/*.css", html_path = "/**/*.html", js_path = "/**/*.js", sass_path = "/**/*.s+(a|c)ss";
 var jsonpath;
 //Reads source paths from analyser_config.json
@@ -46,17 +45,17 @@ gulp.task('lint', ['readconfig'], () => {
   }
   function print_eslint_errors_file()
   {
+      var eslint_writetofile = fs.createWriteStream('reports/eslint-errors/lintingerrors.csv');
       return gulp.src(js_path)
       .pipe(eslint())
       .pipe(eslint.result(result  =>  {
-                // Called for each ESLint result. 
-                console.log(util.colors.green(`ESLint result: ${result.filePath}`));
+                console.log(util.colors.green(`ESLint result: ${result.filePath}`));
                 console.log(util.colors.green(`# Messages: ${result.messages.length}`));
                 console.log(util.colors.green(`# Warnings: ${result.warningCount}`));
                 console.log(util.colors.green(`# Errors: ${result.errorCount}`));
                 console.log("ESLinting Errors output on reports/eslint-errors/lintingerrors.csv");
          }))
-      .pipe(eslint.formatEach('stylish', eslint_wstream));
+      .pipe(eslint.formatEach('stylish', eslint_writetofile));
   }
   function print_eslint_errors_console()
   {
@@ -78,7 +77,7 @@ gulp.task('lint', ['readconfig'], () => {
 });
 //For linting scss and sass
 gulp.task('sasslinting', ['readconfig'], function () {
-   var  file  =  fs.createWriteStream('reports/sass-linting-errors/lint_sass.csv');
+   var  pathforsasslinting  =  fs.createWriteStream('reports/sass-linting-errors/lint_sass.csv');
    if(jsonpath.sasslinting_choice==="off")
    {
      return print_sasslint_errors_off();
@@ -106,9 +105,9 @@ gulp.task('sasslinting', ['readconfig'], function () {
                      .pipe(sassLint({
                            options:  {
                            formatter:  'stylish'}}))
-                    .pipe(sassLint.format(file));
+                    .pipe(sassLint.format(pathforsasslinting));
                     stream.on('finish',  function ()  {
-                    file.end(); });
+                    pathforsasslinting.end(); });
       console.log(util.colors.green("SASSLINT"));
       console.log(util.colors.green("Number of Errors : "+sassLint.length));
       console.log(util.colors.green("Sass Linting Errors output on reports/sass-linting-errors/lint_sass.csv"));
