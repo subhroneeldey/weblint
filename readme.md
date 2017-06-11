@@ -31,16 +31,21 @@ If you want to run any specific method of the gulpfile.js type gulp followed by 
 >   "htmlRoot":"Sample/html",
 >```
 > * In the analyser_config.json for the various type off checking
->       Type "off" to switch off the check
+>
+>       Type "off" to switch off the checking
+>
 >       Type "console" to display result in console
->       type "file" to display result in a seperate file
+>
+>       Type "file" to display result in a seperate file
+>
+>       checkdependency and check-css-classname will always be performed and result will be displayed in the console
 >```json
 >    "eslinting_choice":"file",
 >    "sasslinting_choice":"file",
 >    "csslinting_choice":"file",
 >    "test_accessibility_choice":"file"
 >```
-> * In the gulpfile.js, in function checkcss()  replace > the partner name in the regex expression which is by default given as partnername in invalidclasses and invalidclasses2.
+> * In the gulpfile.js, in function checkcss()  replace the partner name in the regex expression which is by default given as partnername in invalidclasses and invalidclasses2.
 ```javascript
     function checkcss(chunk) {
   util.log(util.colors.green("Checking whether classes are prefixed by their partner names"));
@@ -60,7 +65,7 @@ If you want to run any specific method of the gulpfile.js type gulp followed by 
 > //Change Partnername here
 > ```
 > ## > INSTRUCTION FOR MAIN APPLICATION USER:
-> * In the Angulardependencies.js file mention the dependencies of your > project in the fxp array.
+> * In the Angulardependencies.js file mention the dependencies of your  project in the fxp array.
 > ```javascript
 > var fxpmodule=["a","d"];// Main application must mention their > dependencies here
 > ```
@@ -321,7 +326,7 @@ gulp.task('check-css-classname', ['readconfig'], function () {
 
 **HOW TO USE:**
 
-Replace the partner name in the regex expression which is by default given as partnername.
+Replace the partner name in the regex expression which is by default given as partnername in invalidclasses and invalidclasses2.
 
 A)
 
@@ -387,7 +392,7 @@ gulp checkdependency
 sudo gulp checkdependency
 ```
 
-## 7) It checks whether the html and css files follow the accessibility guidelines and reports necessary errors in a separate file
+## 7) It checks whether the html and css files follow the accessibility guidelines
 
 **CODE:**
 In gulpfile.js
