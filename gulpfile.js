@@ -185,6 +185,7 @@ gulp.task('lint-css', ['readconfig'], function lintCssTask() {
 });
 //For parsing and checking whether css classes and id are prefixed with partnername
 function checkcss(chunk) {
+  util.log(util.colors.green("Checking whether classes are prefixed by their partner names"));
   util.log(util.colors.red("These classes should be prefixed with partnername : "));
   let invalidclasses = chunk.match(/(^|}[\n\s]*)[\s]*(\.|#)[\s]*(?!partnername)[a-zA-Z1234567890_-]+((\s[a-zA-Z1234567890_-\s]+{)|[\s]*{)/gm).toString();//Change Partnername in the regex as required
   let invalidclasses2 = chunk.match(/(\.|#)partnername\..+{/gm).toString();//Change Partnername in the regex as required
@@ -194,13 +195,13 @@ function checkcss(chunk) {
   util.log(util.colors.yellow(invalidclasses2));
 }
 gulp.task('check-css-classname', ['readconfig'], function () {
-  var checkdepen = transform(function (filename) {
+  var checkforclassprefix = transform(function (filename) {
     return map(function (chunk, next) {
       return next(null, checkcss(chunk.toString()))
     })
   })
   gulp.src(sass_path)
-    .pipe(checkdepen)
+    .pipe(checkforclassprefix)
 })
 //For testing whether accessibility standards are satisfied
 gulp.task('test-accessibility', ['readconfig'], function () {
@@ -257,6 +258,7 @@ gulp.task('test-accessibility', ['readconfig'], function () {
 });
 //To prevent overwriting of libraries and check for dependencies
 gulp.task('checkdependency', ['readconfig'], function () {
+  console.log(util.colors.yellow("Checking For Duplicate Dependencies"));
   var checkdepen = transform(function (filename) {
     return map(function (chunk, next) {
       return next(null, checkangular(chunk.toString()))

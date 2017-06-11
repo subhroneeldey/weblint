@@ -7,13 +7,13 @@ var fxpModuleCount = fxpModule.length;
 module.exports = function (file) {
     var moduleDependencies = getModuleDependencies();
     if (moduleDependencies == null) {
-        console.log(" No partner module found");
+        console.log(util.colors.green(" No partner module found"));
         return;
     }
     var dependencies = getDependencies();
     var dependenciesCount = dependencies.length;
     if (dependenciesCount == 0) {
-        console.log(" No dependency of partner found ");
+        console.log(util.colors.red(" No dependency of partner found "));
         return;
     }
 
@@ -31,7 +31,7 @@ module.exports = function (file) {
         for (var i = 0; i < dependenciesCount; i++) {
             for (var j = 0; j < fxpModuleCount; j++) {
                 if (dependencies[i] === fxpModule[j])
-                    console.log(" Same dependendency : " + dependencies[i]);
+                    console.log(util.colors.red(" Same dependendency : " + dependencies[i]));
             }
         }
     }
