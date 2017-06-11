@@ -55,7 +55,7 @@ gulp.task('lint', ['readconfig'], () => {
                 console.log(util.colors.green(`# Errors: ${result.errorCount}`));
                 console.log("ESLinting Errors output on reports/eslint-errors/lintingerrors.csv");
          }))
-      .pipe(eslint.formatEach('stylish', eslint_writetofile));
+      .pipe(eslint.format('stylish', eslint_writetofile));
   }
   function print_eslint_errors_console()
   {
