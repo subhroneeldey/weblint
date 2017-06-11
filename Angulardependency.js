@@ -1,4 +1,5 @@
-var fs = require('fs')
+var fs = require('fs');
+var util = require('gulp-util');
 var gutil = require('gulp-util');
 var path = require('path');
 var fxpModule = ["a", "d"];

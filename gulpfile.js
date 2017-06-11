@@ -53,7 +53,7 @@ gulp.task('lint', ['readconfig'], () => {
                 console.log(util.colors.green(`# Messages: ${result.messages.length}`));
                 console.log(util.colors.green(`# Warnings: ${result.warningCount}`));
                 console.log(util.colors.green(`# Errors: ${result.errorCount}`));
-                console.log("ESLinting Errors output on reports/eslint-errors/lintingerrors.csv");
+                console.log(util.colors.green("ESLinting Errors output on reports/eslint-errors/lintingerrors.csv"));
          }))
       .pipe(eslint.format('stylish', eslint_writetofile));
   }
@@ -267,6 +267,6 @@ gulp.task('checkdependency', ['readconfig'], function () {
   gulp.src(js_path)
     .pipe(checkdepen)
 })
-gulp.task('default',  function () {
-  runSequence('readconfig',['lint',  'sasslinting', 'checkdependency', 'test-accessibility', 'check-css-classname'],'lint-css')
+gulp.task('default',['lint',  'sasslinting', 'checkdependency', 'test-accessibility', 'check-css-classname','lint-css'],  function () {
+  
 });

@@ -575,5 +575,12 @@
   [2m147:612[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
   [2m147:659[22m   [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
 
-[31m[1m✖ 574 problems (574 errors, 0 warnings)
+[4mC:\Users\t-sudey\Desktop\try\Sample\javascript\New Text Document.js[24m
+  [2m1:1[22m   [31merror[39m  The grmctrl controller should be prefixed by partnername  [2mangular/controller-name[22m
+  [2m1:1[22m   [31merror[39m  Filename must be "grmctrl.js"                             [2mangular/file-name[22m
+  [2m1:1[22m   [31merror[39m  Filename must be "app.js"                                 [2mangular/file-name[22m
+  [2m1:1[22m   [31merror[39m  The app module should be prefixed by partnername          [2mangular/module-name[22m
+  [2m2:37[22m  [31merror[39m  Newline required at end of file but not found             [2meol-last[22m
+
+[31m[1m✖ 579 problems (579 errors, 0 warnings)
 [22m[39m
