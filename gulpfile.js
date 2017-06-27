@@ -15,7 +15,7 @@ let rename = require("gulp-rename");
 var plumber = require('gulp-plumber');
 var runSequence = require('run-sequence');
 var gulpStylelint = require('gulp-stylelint');
-var fs = require('fs');
+var fs = require('fs-extra');
 var css_path = "/**/*.css", html_path = "/**/*.html", js_path = "/**/*.js", sass_path = "/**/*.s+(a|c)ss";
 var jsonpath;
 //Reads source paths from analyser_config.json
@@ -45,6 +45,8 @@ gulp.task('lint', ['readconfig'], () => {
   }
   function print_eslint_errors_file()
   {
+    const eslintdir = 'reports/eslint-errors';
+    fs.ensureDir(eslintdir, err => {});
       var eslint_writetofile = fs.createWriteStream('reports/eslint-errors/lintingerrors.csv');
       return gulp.src(js_path)
       .pipe(eslint())
@@ -101,6 +103,8 @@ gulp.task('sasslinting', ['readconfig'], function () {
 
     function print_sasslint_errors_file()
    {
+     const sasslintdir='reports/sass-linting-errors';
+     fs.ensureDir(sasslintdir, err => {});
      var  stream  =  gulp.src(sass_path)
                      .pipe(sassLint({
                            options:  {
@@ -154,6 +158,8 @@ gulp.task('lint-css', ['readconfig'], function lintCssTask() {
   }
   function print_csslint_errors_file()
   {
+    const csslintdir='reports/csslinting_errors';
+    fs.ensureDir(csslintdir, err => {});
     console.log(util.colors.green("CSSLINT"));
     console.log(util.colors.green("CSS Linting Errors output on reports/csslinting_errors/css_lint.csv"));
     return gulp.src(css_path)
@@ -227,6 +233,8 @@ gulp.task('test-accessibility', ['readconfig'], function () {
   }
   function print_test_accessibility_file()
   {
+    const accessibilitydir='reports/test-accessibility-errors'
+    fs.ensureDir(accessibilitydir, err => {});
     console.log(util.colors.green("Testing Accessibility Requirements"));
     console.log(util.colors.green("Accessibilty Errors output on reports/test-accessibility-errors/"));
     return gulp.src([html_path, css_path])

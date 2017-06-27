@@ -32,6 +32,7 @@
     "vinyl-transform": "latest"
   },
   "dependencies": {
+    "fs-extra": "^3.0.1",
     "gulp-class-prefix": "^1.0.1",
     "through2": "^2.0.3"
   }
