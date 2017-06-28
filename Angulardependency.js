@@ -6,6 +6,7 @@ var fxpModule = ["a", "d"];
 var moduleRegex = /\.module\(\s*("partnername"|'partnername')\s*,\s*(\[[^\]]*\])/g;//Change Partnername here
 var fxpModuleCount = fxpModule.length;
 module.exports = function (file) {
+    console.log(util.colors.blue("***********Checking partner module dependencies***********"));
     var moduleDependencies = getModuleDependencies();
     if (moduleDependencies == null) {
         console.log(util.colors.green(" No partner module found"));
