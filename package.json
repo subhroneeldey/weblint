@@ -32,6 +32,8 @@
     "vinyl-transform": "latest"
   },
   "dependencies": {
+    "eslint": "^3.19.0",
+    "eslint-plugin-node": "^5.1.0",
     "fs": "0.0.1-security",
     "fs-extra": "^3.0.1",
     "gulp": "^3.9.1",

@@ -1,0 +1,587 @@
+
+[4mC:\Users\t-sudey\Desktop\try\Sample\javascript\example.js[24m
+    [2m1:103[22m   [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+    [2m1:338[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m1:378[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m1:470[22m   [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+    [2m1:519[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m2:137[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m2:175[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m2:188[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m2:218[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+    [2m2:248[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+    [2m2:351[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m2:367[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+    [2m2:395[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+    [2m2:513[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m3:15[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m3:84[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m3:133[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m3:146[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m3:159[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m3:209[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m3:262[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m3:286[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m4:152[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+    [2m4:428[22m   [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+    [2m5:13[22m    [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+    [2m5:679[22m   [31merror[39m  unnecessary '.call()'                                                                [2mno-useless-call[22m
+    [2m5:727[22m   [31merror[39m  'c' is assigned a value but never used                                               [2mno-unused-vars[22m
+    [2m5:793[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m5:1047[22m  [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+    [2m6:134[22m   [31merror[39m  Expected a conditional expression and instead saw an assignment                      [2mno-cond-assign[22m
+    [2m6:253[22m   [31merror[39m  'e' is already defined                                                               [2mno-redeclare[22m
+    [2m6:371[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m6:547[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+    [2m6:593[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+    [2m6:638[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+    [2m6:683[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+    [2m6:730[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+    [2m6:776[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+    [2m7:28[22m    [31merror[39m  Unexpected control character(s) in regular expression: \x00                          [2mno-control-regex[22m
+    [2m7:39[22m    [31merror[39m  Unexpected control character(s) in regular expression: \x00                          [2mno-control-regex[22m
+    [2m7:77[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+    [2m7:243[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m7:374[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m7:390[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m7:416[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m7:451[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m7:491[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m8:2[22m     [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m8:53[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+    [2m8:149[22m   [31merror[39m  Unnecessary escape character: \-                                                     [2mno-useless-escape[22m
+    [2m8:258[22m   [31merror[39m  Unnecessary escape character: \[                                                     [2mno-useless-escape[22m
+    [2m8:269[22m   [31merror[39m  Unnecessary escape character: \^                                                     [2mno-useless-escape[22m
+    [2m8:300[22m   [31merror[39m  Unexpected control character(s) in regular expression: \x08                          [2mno-control-regex[22m
+    [2m8:605[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m10:265[22m   [31merror[39m  unnecessary '.call()'                                                                [2mno-useless-call[22m
+   [2m10:327[22m   [31merror[39m  Unexpected labeled statement                                                         [2mno-labels[22m
+   [2m10:327[22m   [31merror[39m  Found identifier with same name as label                                             [2mno-label-var[22m
+   [2m10:393[22m   [31merror[39m  unnecessary '.call()'                                                                [2mno-useless-call[22m
+   [2m10:422[22m   [31merror[39m  Unexpected label in break statement                                                  [2mno-labels[22m
+   [2m12:378[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m12:393[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m12:403[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m13:27[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m14:28[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m15:355[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m17:665[22m   [31merror[39m  unnecessary '.call()'                                                                [2mno-useless-call[22m
+   [2m18:85[22m    [31merror[39m  Wrap an immediate function invocation in parentheses                                 [2mwrap-iife[22m
+   [2m18:1289[22m  [31merror[39m  'xb' is assigned a value but never used                                              [2mno-unused-vars[22m
+   [2m19:427[22m   [31merror[39m  'ActiveXObject' is not defined                                                       [2mno-undef[22m
+   [2m20:28[22m    [31merror[39m  'ActiveXObject' is not defined                                                       [2mno-undef[22m
+   [2m20:116[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m20:122[22m   [31merror[39m  'ActiveXObject' is not defined                                                       [2mno-undef[22m
+   [2m20:239[22m   [31merror[39m  Unexpected labeled statement                                                         [2mno-labels[22m
+   [2m20:300[22m   [31merror[39m  Unexpected label in break statement                                                  [2mno-labels[22m
+   [2m20:340[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m21:1[22m     [31merror[39m  Unexpected labeled statement                                                         [2mno-labels[22m
+   [2m21:17[22m    [31merror[39m  Wrap an immediate function invocation in parentheses                                 [2mwrap-iife[22m
+   [2m21:50[22m    [31merror[39m  Unnecessary escape character: \:                                                     [2mno-useless-escape[22m
+   [2m21:55[22m    [31merror[39m  Unnecessary escape character: \)                                                     [2mno-useless-escape[22m
+   [2m21:100[22m   [31merror[39m  Unnecessary escape character: \.                                                     [2mno-useless-escape[22m
+   [2m21:147[22m   [31merror[39m  Unnecessary escape character: \)                                                     [2mno-useless-escape[22m
+   [2m21:231[22m   [31merror[39m  Unnecessary escape character: \/                                                     [2mno-useless-escape[22m
+   [2m21:338[22m   [31merror[39m  Unexpected label in break statement                                                  [2mno-labels[22m
+   [2m22:29[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m22:78[22m    [31merror[39m  Wrap an immediate function invocation in parentheses                                 [2mwrap-iife[22m
+   [2m22:247[22m   [31merror[39m  Unnecessary escape character: \)                                                     [2mno-useless-escape[22m
+   [2m22:563[22m   [31merror[39m  Wrap an immediate function invocation in parentheses                                 [2mwrap-iife[22m
+   [2m22:1040[22m  [31merror[39m  Expected a conditional expression and instead saw an assignment                      [2mno-cond-assign[22m
+   [2m22:1423[22m  [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+   [2m22:1602[22m  [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m22:1811[22m  [31merror[39m  Expected a conditional expression and instead saw an assignment                      [2mno-cond-assign[22m
+   [2m22:1823[22m  [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m23:53[22m    [31merror[39m  Expected a conditional expression and instead saw an assignment                      [2mno-cond-assign[22m
+   [2m23:69[22m    [31merror[39m  'e' is already defined                                                               [2mno-redeclare[22m
+   [2m23:88[22m    [31merror[39m  Expected a conditional expression and instead saw an assignment                      [2mno-cond-assign[22m
+   [2m23:100[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m23:250[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m23:279[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m23:302[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m23:450[22m   [31merror[39m  Object properties must go on a new line if they aren't all on the same line          [2mobject-property-newline[22m
+   [2m23:476[22m   [31merror[39m  Object properties must go on a new line if they aren't all on the same line          [2mobject-property-newline[22m
+   [2m23:494[22m   [31merror[39m  Object properties must go on a new line if they aren't all on the same line          [2mobject-property-newline[22m
+   [2m24:17[22m    [31merror[39m  Object properties must go on a new line if they aren't all on the same line          [2mobject-property-newline[22m
+   [2m24:39[22m    [31merror[39m  Object properties must go on a new line if they aren't all on the same line          [2mobject-property-newline[22m
+   [2m24:53[22m    [31merror[39m  Object properties must go on a new line if they aren't all on the same line          [2mobject-property-newline[22m
+   [2m24:65[22m    [31merror[39m  Object properties must go on a new line if they aren't all on the same line          [2mobject-property-newline[22m
+   [2m24:83[22m    [31merror[39m  Object properties must go on a new line if they aren't all on the same line          [2mobject-property-newline[22m
+   [2m24:95[22m    [31merror[39m  Object properties must go on a new line if they aren't all on the same line          [2mobject-property-newline[22m
+   [2m24:111[22m   [31merror[39m  Object properties must go on a new line if they aren't all on the same line          [2mobject-property-newline[22m
+   [2m24:127[22m   [31merror[39m  Object properties must go on a new line if they aren't all on the same line          [2mobject-property-newline[22m
+   [2m24:217[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m24:340[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m24:503[22m   [31merror[39m  ':' should be placed at the beginning of the line                                    [2moperator-linebreak[22m
+   [2m26:24[22m    [31merror[39m  Found identifier with same name as label                                             [2mno-label-var[22m
+   [2m26:24[22m    [31merror[39m  Unexpected labeled statement                                                         [2mno-labels[22m
+   [2m26:41[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m26:86[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m26:111[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m26:127[22m   [31merror[39m  Unexpected label in break statement                                                  [2mno-labels[22m
+   [2m26:157[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m26:173[22m   [31merror[39m  Unexpected label in break statement                                                  [2mno-labels[22m
+   [2m26:429[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m26:502[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m27:20[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m27:53[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m27:96[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m27:146[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m27:174[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m27:241[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m27:333[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m27:426[22m   [31merror[39m  'g' is already defined                                                               [2mno-redeclare[22m
+   [2m27:452[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m27:507[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m28:201[22m   [31merror[39m  'c' is assigned a value but never used                                               [2mno-unused-vars[22m
+   [2m29:128[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m30:118[22m   [31merror[39m  'c' is already defined                                                               [2mno-redeclare[22m
+   [2m30:155[22m   [31merror[39m  'd' is already defined                                                               [2mno-redeclare[22m
+   [2m30:159[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m30:346[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m30:527[22m   [31merror[39m  Object properties must go on a new line if they aren't all on the same line          [2mobject-property-newline[22m
+   [2m31:9[22m     [31merror[39m  Object properties must go on a new line if they aren't all on the same line          [2mobject-property-newline[22m
+   [2m31:19[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m31:206[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m32:116[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m32:323[22m   [31merror[39m  Unnecessary use of conditional expression for default assignment                     [2mno-unneeded-ternary[22m
+   [2m32:464[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m32:629[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m33:17[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m33:147[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m33:183[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m33:532[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m33:814[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m34:69[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m34:196[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m34:223[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m34:269[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m34:273[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m34:310[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m34:336[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m34:389[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m34:415[22m   [31merror[39m  'b' is already defined                                                               [2mno-redeclare[22m
+   [2m34:500[22m   [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+   [2m35:39[22m    [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+   [2m36:113[22m   [31merror[39m  'b' is already defined                                                               [2mno-redeclare[22m
+   [2m36:126[22m   [31merror[39m  Unexpected labeled statement                                                         [2mno-labels[22m
+   [2m36:126[22m   [31merror[39m  Found identifier with same name as label                                             [2mno-label-var[22m
+   [2m36:281[22m   [31merror[39m  Unexpected label in break statement                                                  [2mno-labels[22m
+   [2m37:293[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m37:406[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m37:437[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m37:438[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m37:511[22m   [31merror[39m  '?' should be placed at the beginning of the line                                    [2moperator-linebreak[22m
+   [2m38:160[22m   [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+   [2m38:172[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m38:179[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m38:298[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m38:438[22m   [31merror[39m  'k' is already defined                                                               [2mno-redeclare[22m
+   [2m38:457[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m38:481[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m39:26[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m39:274[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m41:71[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m41:78[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m41:117[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m41:190[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m41:395[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m41:433[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m42:479[22m   [31merror[39m  You should use the $window service instead of the default window object              [2mangular/window-service[22m
+   [2m42:516[22m   [31merror[39m  You should use the $window service instead of the default window object              [2mangular/window-service[22m
+   [2m42:628[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m42:669[22m   [31merror[39m  You should use the $window service instead of the default window object              [2mangular/window-service[22m
+   [2m42:1278[22m  [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m43:44[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m44:17[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m44:34[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m44:374[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m44:376[22m   [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+   [2m44:874[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m44:1004[22m  [31merror[39m  Unexpected labeled statement                                                         [2mno-labels[22m
+   [2m44:1004[22m  [31merror[39m  Found identifier with same name as label                                             [2mno-label-var[22m
+   [2m44:1105[22m  [31merror[39m  Unexpected label in break statement                                                  [2mno-labels[22m
+   [2m45:33[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m45:40[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m46:30[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m48:60[22m    [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+   [2m50:110[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m50:161[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m50:241[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m50:281[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m50:286[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m50:322[22m   [31merror[39m  Unnecessary escape character: \/                                                     [2mno-useless-escape[22m
+   [2m51:52[22m    [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+   [2m51:254[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m53:56[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m54:410[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m55:28[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m56:8[22m     [31merror[39m  Wrap an immediate function invocation in parentheses                                 [2mwrap-iife[22m
+   [2m56:49[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m58:183[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m58:201[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m58:390[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m59:28[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m60:150[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m60:183[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m60:205[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m60:260[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m60:434[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m60:463[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m60:473[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m60:483[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m61:15[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m61:24[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m61:34[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m61:53[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m61:63[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m61:73[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m61:126[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m61:145[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m61:155[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m61:165[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m61:198[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m61:379[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m61:421[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m61:433[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m62:59[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m62:163[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m62:204[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m66:28[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m66:68[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m66:266[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m66:352[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m66:387[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m66:396[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m66:418[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m66:419[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m66:439[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m66:445[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m68:117[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m68:135[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m68:296[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m68:365[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m69:262[22m   [31merror[39m  'd' is already defined                                                               [2mno-redeclare[22m
+   [2m69:265[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m69:296[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m69:316[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m69:338[22m   [31merror[39m  'c' is already defined                                                               [2mno-redeclare[22m
+   [2m70:368[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m73:163[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m73:356[22m   [31merror[39m  'd' is already defined                                                               [2mno-redeclare[22m
+   [2m73:471[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m73:494[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m74:359[22m   [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+   [2m74:1106[22m  [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+   [2m74:1184[22m  [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+   [2m74:1237[22m  [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m74:1526[22m  [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+   [2m75:1[22m     [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+   [2m76:275[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m77:338[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m77:344[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m78:151[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m78:235[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m78:319[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m78:403[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m79:257[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m80:59[22m    [31merror[39m  Expected a conditional expression and instead saw an assignment                      [2mno-cond-assign[22m
+   [2m80:100[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m80:116[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m80:132[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m80:151[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m80:169[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m80:409[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m81:42[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m81:65[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m81:98[22m    [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+   [2m81:175[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m81:282[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m81:464[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m82:6[22m     [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m82:44[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m82:58[22m    [31merror[39m  Found identifier with same name as label                                             [2mno-label-var[22m
+   [2m82:58[22m    [31merror[39m  Unexpected labeled statement                                                         [2mno-labels[22m
+   [2m82:86[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m82:93[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m82:132[22m   [31merror[39m  Unexpected label in break statement                                                  [2mno-labels[22m
+   [2m83:192[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m86:121[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m86:251[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m86:260[22m   [31merror[39m  'f' is already defined                                                               [2mno-redeclare[22m
+   [2m86:284[22m   [31merror[39m  'g' is already defined                                                               [2mno-redeclare[22m
+   [2m86:293[22m   [31merror[39m  'g' is already defined                                                               [2mno-redeclare[22m
+   [2m86:348[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m86:399[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m87:42[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m87:48[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m88:82[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m89:38[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m89:46[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m89:118[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m89:259[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m90:19[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m90:206[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m91:19[22m    [31merror[39m  Expected a conditional expression and instead saw an assignment                      [2mno-cond-assign[22m
+   [2m91:310[22m   [31merror[39m  'b' is already defined                                                               [2mno-redeclare[22m
+   [2m91:339[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m92:585[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m93:172[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m93:203[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m93:234[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m94:77[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m94:131[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m94:173[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m94:346[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m94:426[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m95:177[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m95:231[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m95:401[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m95:425[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m95:656[22m   [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+   [2m95:740[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m95:752[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m95:863[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m97:53[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m97:115[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m97:267[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m97:294[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m97:320[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m97:331[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m97:387[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+   [2m97:388[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m97:417[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m97:476[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m97:493[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m98:18[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m98:51[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m98:70[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+   [2m98:244[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m98:293[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m98:355[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m98:371[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m98:465[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+   [2m99:2[22m     [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m100:123[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m101:58[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m101:92[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m101:126[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m101:160[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m102:209[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m102:307[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m103:105[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m103:118[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m103:149[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m103:161[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m103:252[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m103:372[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m103:382[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m103:431[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m106:88[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m107:60[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m107:73[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m107:86[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m107:98[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m107:111[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m107:123[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m107:208[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m107:220[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m107:291[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m107:393[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m107:399[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m107:405[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m107:412[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m107:418[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m108:80[22m    [31merror[39m  Unnecessary escape character: \/                                                     [2mno-useless-escape[22m
+  [2m108:336[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m110:182[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m110:193[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m110:220[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m110:410[22m   [31merror[39m  'b' is already defined                                                               [2mno-redeclare[22m
+  [2m110:436[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m110:449[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m110:481[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m110:505[22m   [31merror[39m  ':' should be placed at the beginning of the line                                    [2moperator-linebreak[22m
+  [2m111:12[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m111:53[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m111:244[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m112:46[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m112:183[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m112:258[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m114:47[22m    [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+  [2m114:119[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m114:280[22m   [31merror[39m  Found identifier with same name as label                                             [2mno-label-var[22m
+  [2m114:280[22m   [31merror[39m  Unexpected labeled statement                                                         [2mno-labels[22m
+  [2m115:16[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m115:97[22m    [31merror[39m  Unexpected label in break statement                                                  [2mno-labels[22m
+  [2m115:138[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m115:289[22m   [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+  [2m115:501[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m115:948[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m115:1076[22m  [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m116:29[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m116:138[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m116:468[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m116:478[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m117:118[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m117:166[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m117:187[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m117:235[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m117:320[22m   [31merror[39m  'a' is already defined                                                               [2mno-redeclare[22m
+  [2m117:347[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m118:85[22m    [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+  [2m118:150[22m   [31merror[39m  'a' is already defined                                                               [2mno-redeclare[22m
+  [2m118:163[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m118:209[22m   [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+  [2m118:258[22m   [31merror[39m  Found identifier with same name as label                                             [2mno-label-var[22m
+  [2m118:258[22m   [31merror[39m  Unexpected labeled statement                                                         [2mno-labels[22m
+  [2m118:269[22m   [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+  [2m118:296[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m118:309[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m118:330[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m118:350[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m118:402[22m   [31merror[39m  'f' is already defined                                                               [2mno-redeclare[22m
+  [2m118:414[22m   [31merror[39m  'g' is already defined                                                               [2mno-redeclare[22m
+  [2m118:422[22m   [31merror[39m  'd' is already defined                                                               [2mno-redeclare[22m
+  [2m118:438[22m   [31merror[39m  'e' is already defined                                                               [2mno-redeclare[22m
+  [2m118:462[22m   [31merror[39m  'c' is already defined                                                               [2mno-redeclare[22m
+  [2m118:466[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m118:486[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m119:79[22m    [31merror[39m  Unexpected label in break statement                                                  [2mno-labels[22m
+  [2m119:153[22m   [31merror[39m  You should use the $window service instead of the default window object              [2mangular/window-service[22m
+  [2m119:340[22m   [31merror[39m  Expected a conditional expression and instead saw an assignment                      [2mno-cond-assign[22m
+  [2m119:343[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m119:433[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m119:488[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m119:495[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m120:34[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m121:100[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m121:140[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m121:281[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m121:306[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m121:368[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m122:263[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m122:445[22m   [31merror[39m  'a' is already defined                                                               [2mno-redeclare[22m
+  [2m123:88[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m123:127[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m123:142[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m123:510[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m124:30[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m124:46[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m124:102[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m124:215[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m124:229[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m124:302[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m125:7[22m     [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m125:272[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m127:83[22m    [31merror[39m  'c' is already defined                                                               [2mno-redeclare[22m
+  [2m127:190[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m127:197[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m127:204[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m127:351[22m   [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+  [2m128:82[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m128:164[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m128:400[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m128:459[22m   [31merror[39m  'c' is already defined                                                               [2mno-redeclare[22m
+  [2m128:471[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m128:481[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m129:55[22m    [31merror[39m  'f' is already defined                                                               [2mno-redeclare[22m
+  [2m129:83[22m    [31merror[39m  'e' is already defined                                                               [2mno-redeclare[22m
+  [2m129:320[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m129:326[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m129:366[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m129:417[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m130:41[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m130:294[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m130:328[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m131:61[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m131:673[22m   [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+  [2m132:42[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m132:324[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m132:500[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m133:198[22m   [31merror[39m  'b' is already defined                                                               [2mno-redeclare[22m
+  [2m133:281[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m134:252[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m134:351[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m135:21[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m135:136[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m135:272[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m135:519[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m135:600[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m135:713[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m136:282[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m136:336[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m136:523[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m136:599[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m136:625[22m   [31merror[39m  ':' should be placed at the beginning of the line                                    [2moperator-linebreak[22m
+  [2m137:298[22m   [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+  [2m137:316[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m137:346[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m137:478[22m   [31merror[39m  'c' is already defined                                                               [2mno-redeclare[22m
+  [2m137:495[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m137:526[22m   [31merror[39m  '?' should be placed at the beginning of the line                                    [2moperator-linebreak[22m
+  [2m138:89[22m    [31merror[39m  'd' is already defined                                                               [2mno-redeclare[22m
+  [2m138:98[22m    [31merror[39m  'e' was used before it was defined                                                   [2mno-use-before-define[22m
+  [2m138:108[22m   [31merror[39m  'e' was used before it was defined                                                   [2mno-use-before-define[22m
+  [2m138:112[22m   [31merror[39m  'e' was used before it was defined                                                   [2mno-use-before-define[22m
+  [2m138:346[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m139:33[22m    [31merror[39m  You should use the $timeout service instead of the default window.setTimeout method  [2mangular/timeout-service[22m
+  [2m139:233[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m140:4[22m     [31merror[39m  You should use the $window service instead of the default window object              [2mangular/window-service[22m
+  [2m140:141[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m140:160[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m140:166[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m140:172[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m140:443[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m140:469[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m140:502[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m141:35[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m141:41[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m141:208[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m141:340[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m142:2[22m     [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m142:36[22m    [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m142:70[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m142:215[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m142:368[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m143:144[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m143:168[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m143:427[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m143:467[22m   [31merror[39m  Object properties must go on a new line if they aren't all on the same line          [2mobject-property-newline[22m
+  [2m143:511[22m   [31merror[39m  '?' should be placed at the beginning of the line                                    [2moperator-linebreak[22m
+  [2m144:103[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m144:184[22m   [31merror[39m  'd' is already defined                                                               [2mno-redeclare[22m
+  [2m144:216[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m144:217[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m144:310[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m144:483[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m144:489[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m144:495[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m145:141[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m145:428[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m145:495[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m146:59[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m146:441[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m146:447[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m146:453[22m   [31merror[39m  Expected '!==' and instead saw '!='                                                  [2meqeqeq[22m
+  [2m147:85[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m147:91[22m    [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m147:95[22m    [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m147:153[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m147:159[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m147:186[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m147:196[22m   [31merror[39m  Expected '===' and instead saw '=='                                                  [2meqeqeq[22m
+  [2m147:562[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m147:612[22m   [31merror[39m  Expected an assignment or function call and instead saw an expression                [2mno-unused-expressions[22m
+  [2m147:659[22m   [31merror[39m  Missing '()' invoking a constructor                                                  [2mnew-parens[22m
+
+[4mC:\Users\t-sudey\Desktop\try\Sample\javascript\New Text Document.js[24m
+  [2m1:1[22m   [31merror[39m  The grmctrl controller should be prefixed by partnername  [2mangular/controller-name[22m
+  [2m1:1[22m   [31merror[39m  Filename must be "grmctrl.js"                             [2mangular/file-name[22m
+  [2m1:1[22m   [31merror[39m  Filename must be "app.js"                                 [2mangular/file-name[22m
+  [2m1:1[22m   [31merror[39m  The app module should be prefixed by partnername          [2mangular/module-name[22m
+  [2m2:37[22m  [31merror[39m  Newline required at end of file but not found             [2meol-last[22m
+
+[31m[1m✖ 579 problems (579 errors, 0 warnings)
+[22m[39m[31m[1m  76 errors, 0 warnings potentially fixable with the `--fix` option.
+[22m[39m
