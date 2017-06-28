@@ -30,20 +30,20 @@ gulp.task('readconfig', function () {
 //For linting JavaScript files
 gulp.task('lint', ['readconfig'], () => {
   if(jsonpath.eslinting_choice==="off")
-  return print_eslint_errors_off();
+  return printEslintErrorsOff();
   else if(jsonpath.eslinting_choice==="file")
   {
-    return print_eslint_errors_file();
+    return printEslintErrorsFile();
   }
   else if(jsonpath.eslinting_choice==="console")
   {
-    return print_eslint_errors_console();
+    return printEslintErrorsConsole();
   }
   else
   {
-    return print_eslint_errors_incorrectselection();
+    return printEslintErrorsIncorrectSelection();
   }
-  function print_eslint_errors_file()
+  function printEslintErrorsFile()
   {
     const eslintdir = 'reports/eslint-errors';
     fs.ensureDir(eslintdir, err => {});
@@ -59,18 +59,18 @@ gulp.task('lint', ['readconfig'], () => {
          }))
       .pipe(eslint.format('stylish', eslint_writetofile));
   }
-  function print_eslint_errors_console()
+  function printEslintErrorsConsole()
   {
     return gulp.src(js_path)
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
   }
-  function print_eslint_errors_off()
+  function printEslintErrorsOff()
   {
     return;
   }
-  function print_eslint_errors_incorrectselection()
+  function printEslintErrorsIncorrectSelection()
   {
     console.log(util.colors.red("Configuration value for eslinting_choice not set correctly"));
     console.log(util.colors.red("Choose 'off', 'console', 'file'"));
@@ -82,26 +82,26 @@ gulp.task('sasslinting', ['readconfig'], function () {
    var  pathforsasslinting  =  fs.createWriteStream('reports/sass-linting-errors/lint_sass.csv');
    if(jsonpath.sasslinting_choice==="off")
    {
-     return print_sasslint_errors_off();
+     return printSasslintErrorsOff();
    }
    else if(jsonpath.sasslinting_choice==="file")
    {
-     return print_sasslint_errors_file();
+     return printSasslintErrorsFile();
    }
    else if(jsonpath.sasslinting_choice==="console")
    {
-     return print_sasslint_errors_console();
+     return printSasslintErrorsConsole();
    }
    else
    {
-      return print_sasslint_errors_incorrectselection();
+      return printSasslintErrorsIncorrectSelection();
    }
-   function print_sasslint_errors_off()
+   function printSasslintErrorsOff()
    {
       return;
    }
 
-    function print_sasslint_errors_file()
+    function printSasslintErrorsFile()
    {
      const sasslintdir='reports/sass-linting-errors';
      fs.ensureDir(sasslintdir, err => {});
@@ -117,7 +117,7 @@ gulp.task('sasslinting', ['readconfig'], function () {
       console.log(util.colors.green("Sass Linting Errors output on reports/sass-linting-errors/lint_sass.csv"));
       return  stream;
    }
-    function print_sasslint_errors_console()
+    function printSasslintErrorsConsole()
    {
      return gulp.src(sass_path)
     .pipe(sassLint())
@@ -125,7 +125,7 @@ gulp.task('sasslinting', ['readconfig'], function () {
 
     .pipe(sassLint.failOnError());
    }
-   function print_sasslint_errors_incorrectselection()
+   function printSasslintErrorsIncorrectSelection()
   {
     console.log(util.colors.red("Configuration value for sasslinting_choice not set correctly"));
     console.log(util.colors.red("Choose 'off', 'console', 'file'"));
@@ -136,27 +136,27 @@ gulp.task('sasslinting', ['readconfig'], function () {
 gulp.task('lint-css', ['readconfig'], function lintCssTask() {
   if(jsonpath.csslinting_choice==="off")
   {
-      return print_csslint_errors_off();
+      return printCsslintErrorsOff();
   }
   else if(jsonpath.csslinting_choice==="file")
   {
-    return print_csslint_errors_file();
+    return printCsslintErrorsFile();
   }
   else if(jsonpath.csslinting_choice==="console")
   {
-    return print_csslint_errors_console();
+    return printCsslintErrorsConsole();
   }
   else
   {
-    return print_csslint_errors_incorrectselection();
+    return printCsslintErrorsIncorrectSelection();
   }
 
 
-  function print_csslint_errors_off()
+  function printCsslintErrorsOff()
   {
     return;
   }
-  function print_csslint_errors_file()
+  function printCsslintErrorsFile()
   {
     const csslintdir='reports/csslinting_errors';
     fs.ensureDir(csslintdir, err => {});
@@ -172,7 +172,7 @@ gulp.task('lint-css', ['readconfig'], function lintCssTask() {
         config: { "extends": "stylelint-config-standard" }
       }));
   }
-  function print_csslint_errors_console()
+  function printCsslintErrorsConsole()
   {
     return gulp.src(css_path)
     .pipe(gulpStylelint({
@@ -182,7 +182,7 @@ gulp.task('lint-css', ['readconfig'], function lintCssTask() {
       config: { "extends": "stylelint-config-standard" }
     }));
   }
-  function print_csslint_errors_incorrectselection()
+  function printCsslintErrorsIncorrectSelection()
   {
     console.log(util.colors.red("Configuration value for csslinting_choice not set correctly"));
     console.log(util.colors.red("Choose 'off', 'console', 'file'"));
@@ -190,7 +190,7 @@ gulp.task('lint-css', ['readconfig'], function lintCssTask() {
   } 
 });
 //For parsing and checking whether css classes and id are prefixed with partnername
-function checkcss(chunk) {
+function checkCss(chunk) {
   util.log(util.colors.green("Checking whether classes are prefixed by their partner names"));
   util.log(util.colors.red("These classes should be prefixed with partnername : "));
   let invalidclasses = chunk.match(/(^|}[\n\s]*)[\s]*(\.|#)[\s]*(?!partnername)[a-zA-Z1234567890_-]+((\s[a-zA-Z1234567890_-\s]+{)|[\s]*{)/gm).toString();//Change Partnername in the regex as required
@@ -203,7 +203,7 @@ function checkcss(chunk) {
 gulp.task('check-css-classname', ['readconfig'], function () {
   var checkforclassprefix = transform(function (filename) {
     return map(function (chunk, next) {
-      return next(null, checkcss(chunk.toString()))
+      return next(null, checkCss(chunk.toString()))
     })
   })
   gulp.src(sass_path)
@@ -213,25 +213,25 @@ gulp.task('check-css-classname', ['readconfig'], function () {
 gulp.task('test-accessibility', ['readconfig'], function () {
   if(jsonpath.test_accessibility_choice==="off")
   {
-      return print_test_accessibility_off();
+      return printTestAccessibilityOff();
   }
   else if(jsonpath.test_accessibility_choice==='file')
   {
-    return print_test_accessibility_file();
+    return printTestAccessibilityFile();
   }
   else if(jsonpath.test_accessibility_choice==='console')
   {
-    return print_test_accessibility_console();
+    return printTestAccessibilityConsole();
   }
   else
   {
-    return print_test_accessibility_incorrectselection();
+    return printTestAccessibilityIncorrectSelection();
   }
-  function print_test_accessibility_off()
+  function printTestAccessibilityOff()
   {
     return;
   }
-  function print_test_accessibility_file()
+  function printTestAccessibilityFile()
   {
     const accessibilitydir='reports/test-accessibility-errors'
     fs.ensureDir(accessibilitydir, err => {});
@@ -249,7 +249,7 @@ gulp.task('test-accessibility', ['readconfig'], function () {
     }))
     .pipe(gulp.dest('reports/test-accessibility-errors/'));
   }
-  function print_test_accessibility_console()
+  function printTestAccessibilityConsole()
   {
     return gulp.src([html_path, css_path])
       .pipe(access({
@@ -257,7 +257,7 @@ gulp.task('test-accessibility', ['readconfig'], function () {
      }))
     .on('error', console.log);
   }
-  function print_test_accessibility_incorrectselection()
+  function printTestAccessibilityIncorrectSelection()
   {
     console.log(util.colors.red("Configuration value for test_accessibility_choice not set correctly"));
     console.log(util.colors.red("Choose 'off', 'console', 'file'"));
